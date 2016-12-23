@@ -1,0 +1,819 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9E0EF1A91E0B7E1000B00CF5 /* RecorderIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0EF1A81E0B7E1000B00CF5 /* RecorderIndicatorView.m */; };
+		9E2542311E0BD04900A1FF24 /* EcoMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2542301E0BD04900A1FF24 /* EcoMessage.m */; };
+		9E8A545F1E093F9000AF9B71 /* Chat.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E8A545E1E093F9000AF9B71 /* Chat.xcassets */; };
+		9E8A54691E0A21B500AF9B71 /* ChatEnterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A54651E0A21B500AF9B71 /* ChatEnterViewController.m */; };
+		9E8A546A1E0A21B500AF9B71 /* ChatMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A54671E0A21B500AF9B71 /* ChatMainViewController.m */; };
+		9E8A54721E0A223800AF9B71 /* ChatBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A54711E0A223800AF9B71 /* ChatBaseViewController.m */; };
+		9E8A54751E0A22D000AF9B71 /* ChatMainViewController+ChatBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A54741E0A22D000AF9B71 /* ChatMainViewController+ChatBar.m */; };
+		9EB9CAAD1DFE839C00103A89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9CAAC1DFE839C00103A89 /* main.m */; };
+		9EB9CAB01DFE839C00103A89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9CAAF1DFE839C00103A89 /* AppDelegate.m */; };
+		9EB9CAB31DFE839C00103A89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9CAB21DFE839C00103A89 /* ViewController.m */; };
+		9EB9CAB61DFE839C00103A89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EB9CAB41DFE839C00103A89 /* Main.storyboard */; };
+		9EB9CAB81DFE839C00103A89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EB9CAB71DFE839C00103A89 /* Assets.xcassets */; };
+		9EB9CABB1DFE839C00103A89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EB9CAB91DFE839C00103A89 /* LaunchScreen.storyboard */; };
+		9EB9CAC61DFE839C00103A89 /* VivienVoiceDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9CAC51DFE839C00103A89 /* VivienVoiceDemoTests.m */; };
+		9EB9CAD11DFE839C00103A89 /* VivienVoiceDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9CAD01DFE839C00103A89 /* VivienVoiceDemoUITests.m */; };
+		9EE069611E0A24EC001D22C8 /* ChatBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE0694F1E0A24EC001D22C8 /* ChatBaseView.m */; };
+		9EE069621E0A24EC001D22C8 /* EcoMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE069521E0A24EC001D22C8 /* EcoMessageCell.m */; };
+		9EE069631E0A24EC001D22C8 /* ChatBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE069551E0A24EC001D22C8 /* ChatBar.m */; };
+		9EE069641E0A24EC001D22C8 /* ChatMessageDisplayView+Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE069591E0A24EC001D22C8 /* ChatMessageDisplayView+Delegate.m */; };
+		9EE069651E0A24EC001D22C8 /* ChatMessageDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE0695B1E0A24EC001D22C8 /* ChatMessageDisplayView.m */; };
+		9EE069661E0A24EC001D22C8 /* KeyboardMoreView+CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE0695E1E0A24EC001D22C8 /* KeyboardMoreView+CollectionView.m */; };
+		9EE069671E0A24EC001D22C8 /* KeyboardMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE069601E0A24EC001D22C8 /* KeyboardMoreView.m */; };
+		9EE0696A1E0A251A001D22C8 /* KeyBoardMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE069691E0A251A001D22C8 /* KeyBoardMoreCell.m */; };
+		9EE0696E1E0A500E001D22C8 /* TalkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE0696D1E0A500E001D22C8 /* TalkButton.m */; };
+		9EE069721E0A5552001D22C8 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE069711E0A5552001D22C8 /* UIView+Frame.m */; };
+		FCBDA8B59FE508AF1A70411B /* libPods-VivienVoiceDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D98C7CB277A68EBB190B25A7 /* libPods-VivienVoiceDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9EB9CAC21DFE839C00103A89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9EB9CAA01DFE839C00103A89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9EB9CAA71DFE839C00103A89;
+			remoteInfo = VivienVoiceDemo;
+		};
+		9EB9CACD1DFE839C00103A89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9EB9CAA01DFE839C00103A89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9EB9CAA71DFE839C00103A89;
+			remoteInfo = VivienVoiceDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		91A28B6A0AF40F56D46D6D06 /* Pods-VivienVoiceDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivienVoiceDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-VivienVoiceDemo/Pods-VivienVoiceDemo.release.xcconfig"; sourceTree = "<group>"; };
+		9E0EF1A71E0B7E1000B00CF5 /* RecorderIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecorderIndicatorView.h; sourceTree = "<group>"; };
+		9E0EF1A81E0B7E1000B00CF5 /* RecorderIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecorderIndicatorView.m; sourceTree = "<group>"; };
+		9E25422F1E0BD04900A1FF24 /* EcoMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EcoMessage.h; sourceTree = "<group>"; };
+		9E2542301E0BD04900A1FF24 /* EcoMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EcoMessage.m; sourceTree = "<group>"; };
+		9E8A54441E092A4300AF9B71 /* VivienVoiceDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VivienVoiceDemo.pch; sourceTree = SOURCE_ROOT; };
+		9E8A545E1E093F9000AF9B71 /* Chat.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Chat.xcassets; sourceTree = "<group>"; };
+		9E8A54641E0A21B500AF9B71 /* ChatEnterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatEnterViewController.h; sourceTree = "<group>"; };
+		9E8A54651E0A21B500AF9B71 /* ChatEnterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatEnterViewController.m; sourceTree = "<group>"; };
+		9E8A54661E0A21B500AF9B71 /* ChatMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMainViewController.h; sourceTree = "<group>"; };
+		9E8A54671E0A21B500AF9B71 /* ChatMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMainViewController.m; sourceTree = "<group>"; };
+		9E8A54701E0A223800AF9B71 /* ChatBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBaseViewController.h; sourceTree = "<group>"; };
+		9E8A54711E0A223800AF9B71 /* ChatBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatBaseViewController.m; sourceTree = "<group>"; };
+		9E8A54731E0A22D000AF9B71 /* ChatMainViewController+ChatBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChatMainViewController+ChatBar.h"; sourceTree = "<group>"; };
+		9E8A54741E0A22D000AF9B71 /* ChatMainViewController+ChatBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChatMainViewController+ChatBar.m"; sourceTree = "<group>"; };
+		9EB9CAA81DFE839C00103A89 /* VivienVoiceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VivienVoiceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EB9CAAC1DFE839C00103A89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9EB9CAAE1DFE839C00103A89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9EB9CAAF1DFE839C00103A89 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9EB9CAB11DFE839C00103A89 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9EB9CAB21DFE839C00103A89 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9EB9CAB51DFE839C00103A89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9EB9CAB71DFE839C00103A89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9EB9CABA1DFE839C00103A89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9EB9CABC1DFE839C00103A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EB9CAC11DFE839C00103A89 /* VivienVoiceDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VivienVoiceDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EB9CAC51DFE839C00103A89 /* VivienVoiceDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VivienVoiceDemoTests.m; sourceTree = "<group>"; };
+		9EB9CAC71DFE839C00103A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EB9CACC1DFE839C00103A89 /* VivienVoiceDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VivienVoiceDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EB9CAD01DFE839C00103A89 /* VivienVoiceDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VivienVoiceDemoUITests.m; sourceTree = "<group>"; };
+		9EB9CAD21DFE839C00103A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EE0694E1E0A24EC001D22C8 /* ChatBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBaseView.h; sourceTree = "<group>"; };
+		9EE0694F1E0A24EC001D22C8 /* ChatBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatBaseView.m; sourceTree = "<group>"; };
+		9EE069511E0A24EC001D22C8 /* EcoMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EcoMessageCell.h; sourceTree = "<group>"; };
+		9EE069521E0A24EC001D22C8 /* EcoMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EcoMessageCell.m; sourceTree = "<group>"; };
+		9EE069541E0A24EC001D22C8 /* ChatBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBar.h; sourceTree = "<group>"; };
+		9EE069551E0A24EC001D22C8 /* ChatBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatBar.m; sourceTree = "<group>"; };
+		9EE069561E0A24EC001D22C8 /* ChatBarDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBarDelegate.h; sourceTree = "<group>"; };
+		9EE069581E0A24EC001D22C8 /* ChatMessageDisplayView+Delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChatMessageDisplayView+Delegate.h"; sourceTree = "<group>"; };
+		9EE069591E0A24EC001D22C8 /* ChatMessageDisplayView+Delegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChatMessageDisplayView+Delegate.m"; sourceTree = "<group>"; };
+		9EE0695A1E0A24EC001D22C8 /* ChatMessageDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMessageDisplayView.h; sourceTree = "<group>"; };
+		9EE0695B1E0A24EC001D22C8 /* ChatMessageDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMessageDisplayView.m; sourceTree = "<group>"; };
+		9EE0695D1E0A24EC001D22C8 /* KeyboardMoreView+CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KeyboardMoreView+CollectionView.h"; sourceTree = "<group>"; };
+		9EE0695E1E0A24EC001D22C8 /* KeyboardMoreView+CollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KeyboardMoreView+CollectionView.m"; sourceTree = "<group>"; };
+		9EE0695F1E0A24EC001D22C8 /* KeyboardMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardMoreView.h; sourceTree = "<group>"; };
+		9EE069601E0A24EC001D22C8 /* KeyboardMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardMoreView.m; sourceTree = "<group>"; };
+		9EE069681E0A251A001D22C8 /* KeyBoardMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyBoardMoreCell.h; sourceTree = "<group>"; };
+		9EE069691E0A251A001D22C8 /* KeyBoardMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyBoardMoreCell.m; sourceTree = "<group>"; };
+		9EE0696B1E0A4B02001D22C8 /* ChatMessageDisplayViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatMessageDisplayViewDelegate.h; sourceTree = "<group>"; };
+		9EE0696C1E0A500E001D22C8 /* TalkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkButton.h; sourceTree = "<group>"; };
+		9EE0696D1E0A500E001D22C8 /* TalkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkButton.m; sourceTree = "<group>"; };
+		9EE069701E0A5552001D22C8 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		9EE069711E0A5552001D22C8 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		D180B54502430A588B859F99 /* Pods-VivienVoiceDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivienVoiceDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VivienVoiceDemo/Pods-VivienVoiceDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		D98C7CB277A68EBB190B25A7 /* libPods-VivienVoiceDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VivienVoiceDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9EB9CAA51DFE839C00103A89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCBDA8B59FE508AF1A70411B /* libPods-VivienVoiceDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EB9CABE1DFE839C00103A89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EB9CAC91DFE839C00103A89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8D3032EA9BCA62F151B229AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D180B54502430A588B859F99 /* Pods-VivienVoiceDemo.debug.xcconfig */,
+				91A28B6A0AF40F56D46D6D06 /* Pods-VivienVoiceDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9E8A545D1E093F5100AF9B71 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9E8A545E1E093F9000AF9B71 /* Chat.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9E8A54611E0A21B500AF9B71 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9E8A546F1E0A223800AF9B71 /* BaseClasses */,
+				9E8A54641E0A21B500AF9B71 /* ChatEnterViewController.h */,
+				9E8A54651E0A21B500AF9B71 /* ChatEnterViewController.m */,
+				9E8A54661E0A21B500AF9B71 /* ChatMainViewController.h */,
+				9E8A54671E0A21B500AF9B71 /* ChatMainViewController.m */,
+				9E8A54731E0A22D000AF9B71 /* ChatMainViewController+ChatBar.h */,
+				9E8A54741E0A22D000AF9B71 /* ChatMainViewController+ChatBar.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9E8A546F1E0A223800AF9B71 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				9E8A54701E0A223800AF9B71 /* ChatBaseViewController.h */,
+				9E8A54711E0A223800AF9B71 /* ChatBaseViewController.m */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		9EB9CA9F1DFE839C00103A89 = {
+			isa = PBXGroup;
+			children = (
+				9E8A54441E092A4300AF9B71 /* VivienVoiceDemo.pch */,
+				9EB9CAAA1DFE839C00103A89 /* VivienVoiceDemo */,
+				9EB9CAC41DFE839C00103A89 /* VivienVoiceDemoTests */,
+				9EB9CACF1DFE839C00103A89 /* VivienVoiceDemoUITests */,
+				9EB9CAA91DFE839C00103A89 /* Products */,
+				8D3032EA9BCA62F151B229AD /* Pods */,
+				E9406A0C951F1E31A6A87BD1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9EB9CAA91DFE839C00103A89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9EB9CAA81DFE839C00103A89 /* VivienVoiceDemo.app */,
+				9EB9CAC11DFE839C00103A89 /* VivienVoiceDemoTests.xctest */,
+				9EB9CACC1DFE839C00103A89 /* VivienVoiceDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9EB9CAAA1DFE839C00103A89 /* VivienVoiceDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9E8A545D1E093F5100AF9B71 /* Resources */,
+				9EB9CAE11DFE85E600103A89 /* ChartDemo */,
+				9EB9CAAE1DFE839C00103A89 /* AppDelegate.h */,
+				9EB9CAAF1DFE839C00103A89 /* AppDelegate.m */,
+				9EB9CAB11DFE839C00103A89 /* ViewController.h */,
+				9EB9CAB21DFE839C00103A89 /* ViewController.m */,
+				9EB9CAB41DFE839C00103A89 /* Main.storyboard */,
+				9EB9CAB71DFE839C00103A89 /* Assets.xcassets */,
+				9EB9CAB91DFE839C00103A89 /* LaunchScreen.storyboard */,
+				9EB9CABC1DFE839C00103A89 /* Info.plist */,
+				9EB9CAAB1DFE839C00103A89 /* Supporting Files */,
+			);
+			path = VivienVoiceDemo;
+			sourceTree = "<group>";
+		};
+		9EB9CAAB1DFE839C00103A89 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EB9CAAC1DFE839C00103A89 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9EB9CAC41DFE839C00103A89 /* VivienVoiceDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				9EB9CAC51DFE839C00103A89 /* VivienVoiceDemoTests.m */,
+				9EB9CAC71DFE839C00103A89 /* Info.plist */,
+			);
+			path = VivienVoiceDemoTests;
+			sourceTree = "<group>";
+		};
+		9EB9CACF1DFE839C00103A89 /* VivienVoiceDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9EB9CAD01DFE839C00103A89 /* VivienVoiceDemoUITests.m */,
+				9EB9CAD21DFE839C00103A89 /* Info.plist */,
+			);
+			path = VivienVoiceDemoUITests;
+			sourceTree = "<group>";
+		};
+		9EB9CAE11DFE85E600103A89 /* ChartDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9EE0696F1E0A5552001D22C8 /* Category */,
+				9EE0694C1E0A24EC001D22C8 /* Views */,
+				9E8A54611E0A21B500AF9B71 /* Controller */,
+				9EBE4DA41E027B8200DF6C91 /* Model */,
+			);
+			path = ChartDemo;
+			sourceTree = "<group>";
+		};
+		9EBE4DA41E027B8200DF6C91 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E25422F1E0BD04900A1FF24 /* EcoMessage.h */,
+				9E2542301E0BD04900A1FF24 /* EcoMessage.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9EE0694C1E0A24EC001D22C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9EE0694D1E0A24EC001D22C8 /* BaseClasses */,
+				9EE069501E0A24EC001D22C8 /* Cell */,
+				9EE069531E0A24EC001D22C8 /* ChatBar */,
+				9EE069571E0A24EC001D22C8 /* ChatMainView */,
+				9EE0695C1E0A24EC001D22C8 /* Keyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9EE0694D1E0A24EC001D22C8 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				9EE0694E1E0A24EC001D22C8 /* ChatBaseView.h */,
+				9EE0694F1E0A24EC001D22C8 /* ChatBaseView.m */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		9EE069501E0A24EC001D22C8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9EE069511E0A24EC001D22C8 /* EcoMessageCell.h */,
+				9EE069521E0A24EC001D22C8 /* EcoMessageCell.m */,
+				9EE069681E0A251A001D22C8 /* KeyBoardMoreCell.h */,
+				9EE069691E0A251A001D22C8 /* KeyBoardMoreCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9EE069531E0A24EC001D22C8 /* ChatBar */ = {
+			isa = PBXGroup;
+			children = (
+				9E0EF1A71E0B7E1000B00CF5 /* RecorderIndicatorView.h */,
+				9E0EF1A81E0B7E1000B00CF5 /* RecorderIndicatorView.m */,
+				9EE069541E0A24EC001D22C8 /* ChatBar.h */,
+				9EE069551E0A24EC001D22C8 /* ChatBar.m */,
+				9EE069561E0A24EC001D22C8 /* ChatBarDelegate.h */,
+				9EE0696C1E0A500E001D22C8 /* TalkButton.h */,
+				9EE0696D1E0A500E001D22C8 /* TalkButton.m */,
+			);
+			path = ChatBar;
+			sourceTree = "<group>";
+		};
+		9EE069571E0A24EC001D22C8 /* ChatMainView */ = {
+			isa = PBXGroup;
+			children = (
+				9EE069581E0A24EC001D22C8 /* ChatMessageDisplayView+Delegate.h */,
+				9EE069591E0A24EC001D22C8 /* ChatMessageDisplayView+Delegate.m */,
+				9EE0695A1E0A24EC001D22C8 /* ChatMessageDisplayView.h */,
+				9EE0695B1E0A24EC001D22C8 /* ChatMessageDisplayView.m */,
+				9EE0696B1E0A4B02001D22C8 /* ChatMessageDisplayViewDelegate.h */,
+			);
+			path = ChatMainView;
+			sourceTree = "<group>";
+		};
+		9EE0695C1E0A24EC001D22C8 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9EE0695D1E0A24EC001D22C8 /* KeyboardMoreView+CollectionView.h */,
+				9EE0695E1E0A24EC001D22C8 /* KeyboardMoreView+CollectionView.m */,
+				9EE0695F1E0A24EC001D22C8 /* KeyboardMoreView.h */,
+				9EE069601E0A24EC001D22C8 /* KeyboardMoreView.m */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		9EE0696F1E0A5552001D22C8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				9EE069701E0A5552001D22C8 /* UIView+Frame.h */,
+				9EE069711E0A5552001D22C8 /* UIView+Frame.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E9406A0C951F1E31A6A87BD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D98C7CB277A68EBB190B25A7 /* libPods-VivienVoiceDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9EB9CAA71DFE839C00103A89 /* VivienVoiceDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EB9CAD51DFE839C00103A89 /* Build configuration list for PBXNativeTarget "VivienVoiceDemo" */;
+			buildPhases = (
+				8F8902A45AD3C5F0B5D184F8 /* [CP] Check Pods Manifest.lock */,
+				9EB9CAA41DFE839C00103A89 /* Sources */,
+				9EB9CAA51DFE839C00103A89 /* Frameworks */,
+				9EB9CAA61DFE839C00103A89 /* Resources */,
+				301655ADB3CB77EBD987E2C7 /* [CP] Embed Pods Frameworks */,
+				A28C4BF16059BEDA81AD5264 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VivienVoiceDemo;
+			productName = VivienVoiceDemo;
+			productReference = 9EB9CAA81DFE839C00103A89 /* VivienVoiceDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9EB9CAC01DFE839C00103A89 /* VivienVoiceDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EB9CAD81DFE839C00103A89 /* Build configuration list for PBXNativeTarget "VivienVoiceDemoTests" */;
+			buildPhases = (
+				9EB9CABD1DFE839C00103A89 /* Sources */,
+				9EB9CABE1DFE839C00103A89 /* Frameworks */,
+				9EB9CABF1DFE839C00103A89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9EB9CAC31DFE839C00103A89 /* PBXTargetDependency */,
+			);
+			name = VivienVoiceDemoTests;
+			productName = VivienVoiceDemoTests;
+			productReference = 9EB9CAC11DFE839C00103A89 /* VivienVoiceDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9EB9CACB1DFE839C00103A89 /* VivienVoiceDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EB9CADB1DFE839C00103A89 /* Build configuration list for PBXNativeTarget "VivienVoiceDemoUITests" */;
+			buildPhases = (
+				9EB9CAC81DFE839C00103A89 /* Sources */,
+				9EB9CAC91DFE839C00103A89 /* Frameworks */,
+				9EB9CACA1DFE839C00103A89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9EB9CACE1DFE839C00103A89 /* PBXTargetDependency */,
+			);
+			name = VivienVoiceDemoUITests;
+			productName = VivienVoiceDemoUITests;
+			productReference = 9EB9CACC1DFE839C00103A89 /* VivienVoiceDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9EB9CAA01DFE839C00103A89 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Vivien;
+				TargetAttributes = {
+					9EB9CAA71DFE839C00103A89 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = C7G78L37X3;
+						ProvisioningStyle = Automatic;
+					};
+					9EB9CAC01DFE839C00103A89 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9EB9CAA71DFE839C00103A89;
+					};
+					9EB9CACB1DFE839C00103A89 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9EB9CAA71DFE839C00103A89;
+					};
+				};
+			};
+			buildConfigurationList = 9EB9CAA31DFE839C00103A89 /* Build configuration list for PBXProject "VivienVoiceDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9EB9CA9F1DFE839C00103A89;
+			productRefGroup = 9EB9CAA91DFE839C00103A89 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9EB9CAA71DFE839C00103A89 /* VivienVoiceDemo */,
+				9EB9CAC01DFE839C00103A89 /* VivienVoiceDemoTests */,
+				9EB9CACB1DFE839C00103A89 /* VivienVoiceDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9EB9CAA61DFE839C00103A89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EB9CABB1DFE839C00103A89 /* LaunchScreen.storyboard in Resources */,
+				9E8A545F1E093F9000AF9B71 /* Chat.xcassets in Resources */,
+				9EB9CAB81DFE839C00103A89 /* Assets.xcassets in Resources */,
+				9EB9CAB61DFE839C00103A89 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EB9CABF1DFE839C00103A89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EB9CACA1DFE839C00103A89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		301655ADB3CB77EBD987E2C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VivienVoiceDemo/Pods-VivienVoiceDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F8902A45AD3C5F0B5D184F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A28C4BF16059BEDA81AD5264 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VivienVoiceDemo/Pods-VivienVoiceDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9EB9CAA41DFE839C00103A89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EB9CAB31DFE839C00103A89 /* ViewController.m in Sources */,
+				9EB9CAB01DFE839C00103A89 /* AppDelegate.m in Sources */,
+				9E8A54721E0A223800AF9B71 /* ChatBaseViewController.m in Sources */,
+				9EE069641E0A24EC001D22C8 /* ChatMessageDisplayView+Delegate.m in Sources */,
+				9E8A54751E0A22D000AF9B71 /* ChatMainViewController+ChatBar.m in Sources */,
+				9E8A546A1E0A21B500AF9B71 /* ChatMainViewController.m in Sources */,
+				9E8A54691E0A21B500AF9B71 /* ChatEnterViewController.m in Sources */,
+				9EE069621E0A24EC001D22C8 /* EcoMessageCell.m in Sources */,
+				9EE069631E0A24EC001D22C8 /* ChatBar.m in Sources */,
+				9EE069651E0A24EC001D22C8 /* ChatMessageDisplayView.m in Sources */,
+				9EE069671E0A24EC001D22C8 /* KeyboardMoreView.m in Sources */,
+				9EB9CAAD1DFE839C00103A89 /* main.m in Sources */,
+				9E2542311E0BD04900A1FF24 /* EcoMessage.m in Sources */,
+				9EE069611E0A24EC001D22C8 /* ChatBaseView.m in Sources */,
+				9EE069661E0A24EC001D22C8 /* KeyboardMoreView+CollectionView.m in Sources */,
+				9EE069721E0A5552001D22C8 /* UIView+Frame.m in Sources */,
+				9EE0696A1E0A251A001D22C8 /* KeyBoardMoreCell.m in Sources */,
+				9E0EF1A91E0B7E1000B00CF5 /* RecorderIndicatorView.m in Sources */,
+				9EE0696E1E0A500E001D22C8 /* TalkButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EB9CABD1DFE839C00103A89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EB9CAC61DFE839C00103A89 /* VivienVoiceDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EB9CAC81DFE839C00103A89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EB9CAD11DFE839C00103A89 /* VivienVoiceDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9EB9CAC31DFE839C00103A89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9EB9CAA71DFE839C00103A89 /* VivienVoiceDemo */;
+			targetProxy = 9EB9CAC21DFE839C00103A89 /* PBXContainerItemProxy */;
+		};
+		9EB9CACE1DFE839C00103A89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9EB9CAA71DFE839C00103A89 /* VivienVoiceDemo */;
+			targetProxy = 9EB9CACD1DFE839C00103A89 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9EB9CAB41DFE839C00103A89 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EB9CAB51DFE839C00103A89 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9EB9CAB91DFE839C00103A89 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EB9CABA1DFE839C00103A89 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9EB9CAD31DFE839C00103A89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9EB9CAD41DFE839C00103A89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9EB9CAD61DFE839C00103A89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D180B54502430A588B859F99 /* Pods-VivienVoiceDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C7G78L37X3;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/VivienVoiceDemo.pch";
+				INFOPLIST_FILE = VivienVoiceDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivien.ios.VivienVoiceDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9EB9CAD71DFE839C00103A89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91A28B6A0AF40F56D46D6D06 /* Pods-VivienVoiceDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C7G78L37X3;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/VivienVoiceDemo.pch";
+				INFOPLIST_FILE = VivienVoiceDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivien.ios.VivienVoiceDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9EB9CAD91DFE839C00103A89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VivienVoiceDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivien.ios.VivienVoiceDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VivienVoiceDemo.app/VivienVoiceDemo";
+			};
+			name = Debug;
+		};
+		9EB9CADA1DFE839C00103A89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VivienVoiceDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivien.ios.VivienVoiceDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VivienVoiceDemo.app/VivienVoiceDemo";
+			};
+			name = Release;
+		};
+		9EB9CADC1DFE839C00103A89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VivienVoiceDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivien.ios.VivienVoiceDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VivienVoiceDemo;
+			};
+			name = Debug;
+		};
+		9EB9CADD1DFE839C00103A89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VivienVoiceDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivien.ios.VivienVoiceDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VivienVoiceDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9EB9CAA31DFE839C00103A89 /* Build configuration list for PBXProject "VivienVoiceDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EB9CAD31DFE839C00103A89 /* Debug */,
+				9EB9CAD41DFE839C00103A89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EB9CAD51DFE839C00103A89 /* Build configuration list for PBXNativeTarget "VivienVoiceDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EB9CAD61DFE839C00103A89 /* Debug */,
+				9EB9CAD71DFE839C00103A89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EB9CAD81DFE839C00103A89 /* Build configuration list for PBXNativeTarget "VivienVoiceDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EB9CAD91DFE839C00103A89 /* Debug */,
+				9EB9CADA1DFE839C00103A89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EB9CADB1DFE839C00103A89 /* Build configuration list for PBXNativeTarget "VivienVoiceDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EB9CADC1DFE839C00103A89 /* Debug */,
+				9EB9CADD1DFE839C00103A89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9EB9CAA01DFE839C00103A89 /* Project object */;
+}

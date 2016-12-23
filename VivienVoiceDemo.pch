@@ -1,0 +1,31 @@
+//
+//  VivienVoiceDemo.pch
+//  VivienVoiceDemo
+//
+//  Created by Vivien on 2016/12/20.
+//  Copyright © 2016年 Vivien. All rights reserved.
+//
+#define     kScreenWidth                [UIScreen mainScreen].bounds.size.width
+#define     kScreenHeight               [UIScreen mainScreen].bounds.size.height
+
+
+
+#define     BORDER_WIDTH_1PX            ([[UIScreen mainScreen] scale] > 0.0 ? 1.0 / [[UIScreen mainScreen] scale] : 1.0)
+
+
+
+#define     HEIGHT_TABBAR               49.0f
+#define     HEIGHT_CHATBAR_TEXTVIEW         36.0f
+#define     HEIGHT_CHAT_KEYBOARD            215.0f
+
+
+#import "Masonry.h"
+#import "UIView+Frame.h"
+
+
+typedef NS_ENUM(NSInteger, EcoChatBarStatus) {
+    EcoChatBarStatusInit,
+    EcoChatBarStatusVoice,
+    EcoChatBarStatusMore,
+    EcoChatBarStatusKeyboard,
+};
