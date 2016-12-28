@@ -8,6 +8,7 @@
 
 #import "ChatBar.h"
 #import "TalkButton.h"
+
 @interface ChatBar () <UITextViewDelegate>
 {
     
@@ -80,6 +81,7 @@
     return YES;
 }
 
+
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
     if ([text isEqualToString:@"\n"]){
@@ -87,6 +89,16 @@
         return NO;
     }
     return YES;
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    [self reloadTextViewWithAnimation:YES];
+}
+
+- (void)textViewDidChange:(UITextView *)textView
+{
+    [self reloadTextViewWithAnimation:YES];
 }
 
 - (void)sendCurrentText
@@ -97,7 +109,7 @@
         }
     }
     [self.textView setText:@""];
-    //    [self p_reloadTextViewWithAnimation:YES];
+    [self reloadTextViewWithAnimation:YES];
 }
 
 - (BOOL)resignFirstResponder
@@ -152,6 +164,63 @@
         self.status = EcoChatBarStatusVoice;
     }
 }
+
+#pragma mark - Private Methods
+- (void)reloadTextViewWithAnimation:(BOOL)animation
+{
+    CGFloat textHeight = [self.textView sizeThatFits:CGSizeMake(self.textView.width, MAXFLOAT)].height;
+    CGFloat height = textHeight > HEIGHT_CHATBAR_TEXTVIEW ? textHeight : HEIGHT_CHATBAR_TEXTVIEW;
+    height = (textHeight <= HEIGHT_MAX_CHATBAR_TEXTVIEW ? textHeight : HEIGHT_MAX_CHATBAR_TEXTVIEW);
+    [self.textView setScrollEnabled:textHeight > height];
+    if (height != self.textView.height) {
+        if (animation) {
+            [UIView animateWithDuration:0.2 animations:^{
+                [self.textView mas_updateConstraints:^(MASConstraintMaker *make) {
+                    make.height.mas_equalTo(height);
+                }];
+                if (self.superview) {
+                    [self.superview layoutIfNeeded];
+                }
+                if (self.delegate && [self.delegate respondsToSelector:@selector(chatBar:didChangeTextViewHeight:)]) {
+                    [self.delegate chatBar:self didChangeTextViewHeight:self.textView.height];
+                }
+            } completion:^(BOOL finished) {
+                if (textHeight > height) {
+                    [self.textView setContentOffset:CGPointMake(0, textHeight - height) animated:YES];
+                }
+                if (self.delegate && [self.delegate respondsToSelector:@selector(chatBar:didChangeTextViewHeight:)]) {
+                    [self.delegate chatBar:self didChangeTextViewHeight:height];
+                }
+            }];
+        }
+        else {
+            [self.textView mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.height.mas_equalTo(height);
+            }];
+            if (self.superview) {
+                [self.superview layoutIfNeeded];
+            }
+            if (self.delegate && [self.delegate respondsToSelector:@selector(chatBar:didChangeTextViewHeight:)]) {
+                [self.delegate chatBar:self didChangeTextViewHeight:height];
+            }
+            if (textHeight > height) {
+                [self.textView setContentOffset:CGPointMake(0, textHeight - height) animated:YES];
+            }
+        }
+    }
+    else if (textHeight > height) {
+        if (animation) {
+            CGFloat offsetY = self.textView.contentSize.height - self.textView.height;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.textView setContentOffset:CGPointMake(0, offsetY) animated:YES];
+            });
+        }
+        else {
+            [self.textView setContentOffset:CGPointMake(0, self.textView.contentSize.height - self.textView.height) animated:NO];
+        }
+    }
+}
+
 
 #pragma mark - # Gettter  Subviews
 - (UIButton *)voiceButton

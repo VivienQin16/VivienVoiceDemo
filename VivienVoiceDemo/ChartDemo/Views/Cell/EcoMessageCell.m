@@ -89,9 +89,7 @@
         
         [_bubbleImage mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.contentView).mas_equalTo(1.0f);
-//            make.width.mas_equalTo(self.messageLabel);
             make.right.mas_equalTo(self.avatarButton.mas_left).mas_offset(-MSG_SPACE_LEFT);
-//            make.bottom.mas_equalTo(self.messageLabel).mas_offset(MSG_SPACE_BTM);
         }];
         
         [self.messageLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -105,24 +103,30 @@
     else{  //机器人发的
         
         bubble =  [UIImage imageNamed:@"ReceiverTextNodeBkg"];
-        [_bubbleImage setImage:[UIImage imageNamed:@"ReceiverTextNodeBkg"]];
+        [_bubbleImage setImage:[bubble stretchableImageWithLeftCapWidth:bubble.size.width/2 topCapHeight:bubble.size.height/2]];
         
         [_avatarButton setImage:[UIImage imageNamed:@"icon_friend"] forState:UIControlStateNormal];
         [self.messageLabel setTextAlignment: NSTextAlignmentLeft];
 
         
         [_bubbleImage mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.avatarButton.mas_right).mas_offset(5.0f);
-            make.top.mas_equalTo(self.contentView);
-            make.width.mas_equalTo(self.messageLabel);
+            make.left.mas_equalTo(self.avatarButton.mas_right).mas_offset(MSG_SPACE_LEFT);
+            make.top.mas_equalTo(self.contentView).mas_offset(1.0f);
+//            make.width.mas_equalTo(self.messageLabel);
         }];
         
         [self.messageLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.bubbleImage).mas_offset(5.0f);
-            make.top.mas_equalTo(self.contentView).mas_offset(MSG_SPACE_TOP);
-            make.bottom.mas_equalTo(self.contentView); //right.
+            make.left.mas_equalTo(self.bubbleImage).mas_offset(10.0f);
+            make.top.mas_equalTo(self.bubbleImage).mas_offset(1.0f);
+            make.bottom.mas_equalTo(self.bubbleImage).mas_offset(-1.0f); //right.
+            make.right.mas_equalTo(self.bubbleImage).mas_offset(-10.0f);
         }];
     }
+    
+//    CGSize   frameSize = [self.messageLabel sizeThatFits:CGSizeMake(MAX_MESSAGE_WIDTH, MAXFLOAT)];
+//    [self.messageLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+//        make.size.mas_equalTo(frameSize);
+//    }];
     
 }
 
@@ -158,7 +162,6 @@
 {
     if (_avatarButton == nil) {
         _avatarButton = [[UIButton alloc] init];
-        _avatarButton.backgroundColor = [UIColor redColor];
         [_avatarButton.layer setMasksToBounds:YES];
         [_avatarButton.layer setBorderWidth:BORDER_WIDTH_1PX];
         [_avatarButton.layer setBorderColor:[UIColor colorWithWhite:0.7 alpha:1.0].CGColor];
@@ -172,7 +175,7 @@
 {
     if (_bubbleImage == nil) {
         _bubbleImage = [[UIImageView alloc]init];
-        _bubbleImage.backgroundColor = [UIColor redColor];
+//        _bubbleImage.backgroundColor = [UIColor grayColor];
         
     }
     return _bubbleImage;

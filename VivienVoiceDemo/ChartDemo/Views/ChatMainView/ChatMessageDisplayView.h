@@ -18,6 +18,7 @@
 @property (nonatomic, assign) id<ChatMessageDisplayViewDelegate>delegate;
 
 - (void)reloadData;
+- (void)scrollToBottomWithAnimation:(BOOL)animation;
 
 
 @end

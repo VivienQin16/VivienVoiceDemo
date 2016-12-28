@@ -69,6 +69,10 @@
     [self.chatBar resignFirstResponder];
 }
 
+- (void)chatBar:(ChatBar *)chatBar didChangeTextViewHeight:(CGFloat)height
+{
+    [self.messageDisplayView scrollToBottomWithAnimation:NO];
+}
 
 //发送文本
 - (void)sendTextViewText:(NSString *)text

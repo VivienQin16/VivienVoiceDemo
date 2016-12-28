@@ -1,9 +1,9 @@
 //
 //  UIView+Frame.h
-//  TLChat
+//  VivienVoiceDemo
 //
-//  Created by 李伯坤 on 16/1/25.
-//  Copyright © 2016年 李伯坤. All rights reserved.
+//  Created by Vivien on 2016/12/15.
+//  Copyright © 2016年 Vivien. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

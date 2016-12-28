@@ -38,6 +38,11 @@
     }
 }
 
+- (void)scrollToBottomWithAnimation:(BOOL)animation
+{
+    [self.tableView scrollToBottomWithAnimation:animation];
+}
+
 
 - (void)reloadData
 {

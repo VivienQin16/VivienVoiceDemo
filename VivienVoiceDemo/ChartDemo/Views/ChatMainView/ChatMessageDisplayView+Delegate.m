@@ -17,8 +17,28 @@
      return self.dataArr.count;
 }
 
+
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
+//    static EcoMessageCell *cell = nil;
+//    if (!cell){
+//        cell = [[EcoMessageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+//    }
+//
+////    [cell setMessage:self.dataArr[indexPath.row]];
+//    [cell updateConstraintsIfNeeded];
+//    [cell setNeedsLayout];
+//    
+//    CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+//    NSLog(@"height:%f",height);
+//            
+//    return height + 1;
     return 60;
 }
 

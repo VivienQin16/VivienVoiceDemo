@@ -32,6 +32,9 @@ typedef NS_ENUM(NSInteger, MessageType) {
 };
 
 @interface EcoMessage : NSObject
+{
+    CGSize fitSize;
+}
 
 @property (nonatomic, strong) NSString *messageID;                  // 消息ID
 //@property (nonatomic, strong) NSString *userID;                     // 发送者ID

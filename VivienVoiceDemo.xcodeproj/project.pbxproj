@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9E0EF1A91E0B7E1000B00CF5 /* RecorderIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0EF1A81E0B7E1000B00CF5 /* RecorderIndicatorView.m */; };
+		9E249F771E13A2090029AAFA /* UITableView+Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E249F761E13A2090029AAFA /* UITableView+Chat.m */; };
 		9E2542311E0BD04900A1FF24 /* EcoMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2542301E0BD04900A1FF24 /* EcoMessage.m */; };
 		9E413BE41E0D1593003430E1 /* EcoMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E413BE31E0D1593003430E1 /* EcoMessageManager.m */; };
 		9E531A751E1102E4000990F9 /* ChatBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E531A721E1102E4000990F9 /* ChatBaseView.m */; };
@@ -59,6 +60,8 @@
 		91A28B6A0AF40F56D46D6D06 /* Pods-VivienVoiceDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivienVoiceDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-VivienVoiceDemo/Pods-VivienVoiceDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9E0EF1A71E0B7E1000B00CF5 /* RecorderIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecorderIndicatorView.h; sourceTree = "<group>"; };
 		9E0EF1A81E0B7E1000B00CF5 /* RecorderIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecorderIndicatorView.m; sourceTree = "<group>"; };
+		9E249F751E13A2090029AAFA /* UITableView+Chat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Chat.h"; sourceTree = "<group>"; };
+		9E249F761E13A2090029AAFA /* UITableView+Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Chat.m"; sourceTree = "<group>"; };
 		9E25422F1E0BD04900A1FF24 /* EcoMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EcoMessage.h; sourceTree = "<group>"; };
 		9E2542301E0BD04900A1FF24 /* EcoMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EcoMessage.m; sourceTree = "<group>"; };
 		9E413BE21E0D1593003430E1 /* EcoMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EcoMessageManager.h; sourceTree = "<group>"; };
@@ -342,6 +345,8 @@
 		9EE0696F1E0A5552001D22C8 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				9E249F751E13A2090029AAFA /* UITableView+Chat.h */,
+				9E249F761E13A2090029AAFA /* UITableView+Chat.m */,
 				9EE069701E0A5552001D22C8 /* UIView+Frame.h */,
 				9EE069711E0A5552001D22C8 /* UIView+Frame.m */,
 			);
@@ -559,6 +564,7 @@
 				9E531A791E11052A000990F9 /* EcoCommonFunc.m in Sources */,
 				9EB9CAAD1DFE839C00103A89 /* main.m in Sources */,
 				9E2542311E0BD04900A1FF24 /* EcoMessage.m in Sources */,
+				9E249F771E13A2090029AAFA /* UITableView+Chat.m in Sources */,
 				9EE069661E0A24EC001D22C8 /* KeyboardMoreView+CollectionView.m in Sources */,
 				9EE069721E0A5552001D22C8 /* UIView+Frame.m in Sources */,
 				9EE0696A1E0A251A001D22C8 /* KeyBoardMoreCell.m in Sources */,
