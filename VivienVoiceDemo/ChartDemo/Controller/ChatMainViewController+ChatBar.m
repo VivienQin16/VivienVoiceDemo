@@ -10,14 +10,12 @@
 
 @implementation ChatMainViewController (ChatBar)
 
-
+#pragma mark --改变Charbar状态
 - (void)changeStatusFrom:(EcoChatBarStatus)fromStatus to:(EcoChatBarStatus)toStatus
 {
-
     if (self.curStatus == toStatus) {
         return;
     }
-    
     self.lastStatus = fromStatus;
     self.curStatus = toStatus;
     
@@ -45,13 +43,14 @@
              make.bottom.mas_equalTo(self.view);
          }];
      }
+    
+    [self layoutSubviews];
 }
 
-
+///点击空白区域隐藏chatBar
 - (void)chatMessageDisplayViewDidTouched:(ChatMessageDisplayView *)chatTVC
 {
     if (self.curStatus == EcoChatBarStatusMore) {
-        
         [self.moreKeyboard dismissWithAnimation:YES];
         [self.chatBar mas_updateConstraints:^(MASConstraintMaker *make) {
             make.bottom.mas_equalTo(self.view);
@@ -71,7 +70,25 @@
 }
 
 
-//MARK: 系统键盘回调
+//发送文本
+- (void)sendTextViewText:(NSString *)text
+{
+    EcoMessage *textMessage = [[EcoMessage alloc]init];
+    textMessage.ownerTyper = MessageOwnerTypeSelf;
+    textMessage.messageText = text;
+    textMessage.messageType = MessageTypeText;
+    
+    BOOL result =  [[EcoMessageManager sharedMessageManager]  saveEcoMessage:textMessage];
+    if (result) {
+        [self setMessageData];
+        [self.messageDisplayView reloadData];
+    }
+    
+    
+    
+}
+
+#pragma mark --系统键盘回调
 - (void)keyboardWillShow:(NSNotification *)notification
 {
     if (self.curStatus != EcoChatBarStatusKeyboard) {

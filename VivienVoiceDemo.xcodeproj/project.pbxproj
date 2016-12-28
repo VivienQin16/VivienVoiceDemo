@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		9E0EF1A91E0B7E1000B00CF5 /* RecorderIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0EF1A81E0B7E1000B00CF5 /* RecorderIndicatorView.m */; };
 		9E2542311E0BD04900A1FF24 /* EcoMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2542301E0BD04900A1FF24 /* EcoMessage.m */; };
+		9E413BE41E0D1593003430E1 /* EcoMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E413BE31E0D1593003430E1 /* EcoMessageManager.m */; };
+		9E531A751E1102E4000990F9 /* ChatBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E531A721E1102E4000990F9 /* ChatBaseView.m */; };
+		9E531A761E1102E4000990F9 /* ChatBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E531A741E1102E4000990F9 /* ChatBaseViewController.m */; };
+		9E531A791E11052A000990F9 /* EcoCommonFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E531A781E11052A000990F9 /* EcoCommonFunc.m */; };
+		9E531A7C1E110D43000990F9 /* EcoMessageDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E531A7B1E110D43000990F9 /* EcoMessageDBHelper.m */; };
 		9E8A545F1E093F9000AF9B71 /* Chat.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E8A545E1E093F9000AF9B71 /* Chat.xcassets */; };
 		9E8A54691E0A21B500AF9B71 /* ChatEnterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A54651E0A21B500AF9B71 /* ChatEnterViewController.m */; };
 		9E8A546A1E0A21B500AF9B71 /* ChatMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A54671E0A21B500AF9B71 /* ChatMainViewController.m */; };
-		9E8A54721E0A223800AF9B71 /* ChatBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A54711E0A223800AF9B71 /* ChatBaseViewController.m */; };
 		9E8A54751E0A22D000AF9B71 /* ChatMainViewController+ChatBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A54741E0A22D000AF9B71 /* ChatMainViewController+ChatBar.m */; };
 		9EB9CAAD1DFE839C00103A89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9CAAC1DFE839C00103A89 /* main.m */; };
 		9EB9CAB01DFE839C00103A89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9CAAF1DFE839C00103A89 /* AppDelegate.m */; };
@@ -22,7 +26,6 @@
 		9EB9CABB1DFE839C00103A89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EB9CAB91DFE839C00103A89 /* LaunchScreen.storyboard */; };
 		9EB9CAC61DFE839C00103A89 /* VivienVoiceDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9CAC51DFE839C00103A89 /* VivienVoiceDemoTests.m */; };
 		9EB9CAD11DFE839C00103A89 /* VivienVoiceDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9CAD01DFE839C00103A89 /* VivienVoiceDemoUITests.m */; };
-		9EE069611E0A24EC001D22C8 /* ChatBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE0694F1E0A24EC001D22C8 /* ChatBaseView.m */; };
 		9EE069621E0A24EC001D22C8 /* EcoMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE069521E0A24EC001D22C8 /* EcoMessageCell.m */; };
 		9EE069631E0A24EC001D22C8 /* ChatBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE069551E0A24EC001D22C8 /* ChatBar.m */; };
 		9EE069641E0A24EC001D22C8 /* ChatMessageDisplayView+Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE069591E0A24EC001D22C8 /* ChatMessageDisplayView+Delegate.m */; };
@@ -58,14 +61,22 @@
 		9E0EF1A81E0B7E1000B00CF5 /* RecorderIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecorderIndicatorView.m; sourceTree = "<group>"; };
 		9E25422F1E0BD04900A1FF24 /* EcoMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EcoMessage.h; sourceTree = "<group>"; };
 		9E2542301E0BD04900A1FF24 /* EcoMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EcoMessage.m; sourceTree = "<group>"; };
+		9E413BE21E0D1593003430E1 /* EcoMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EcoMessageManager.h; sourceTree = "<group>"; };
+		9E413BE31E0D1593003430E1 /* EcoMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EcoMessageManager.m; sourceTree = "<group>"; };
+		9E531A711E1102E4000990F9 /* ChatBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBaseView.h; sourceTree = "<group>"; };
+		9E531A721E1102E4000990F9 /* ChatBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatBaseView.m; sourceTree = "<group>"; };
+		9E531A731E1102E4000990F9 /* ChatBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBaseViewController.h; sourceTree = "<group>"; };
+		9E531A741E1102E4000990F9 /* ChatBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatBaseViewController.m; sourceTree = "<group>"; };
+		9E531A771E11052A000990F9 /* EcoCommonFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EcoCommonFunc.h; sourceTree = "<group>"; };
+		9E531A781E11052A000990F9 /* EcoCommonFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EcoCommonFunc.m; sourceTree = "<group>"; };
+		9E531A7A1E110D43000990F9 /* EcoMessageDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EcoMessageDBHelper.h; sourceTree = "<group>"; };
+		9E531A7B1E110D43000990F9 /* EcoMessageDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EcoMessageDBHelper.m; sourceTree = "<group>"; };
 		9E8A54441E092A4300AF9B71 /* VivienVoiceDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VivienVoiceDemo.pch; sourceTree = SOURCE_ROOT; };
 		9E8A545E1E093F9000AF9B71 /* Chat.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Chat.xcassets; sourceTree = "<group>"; };
 		9E8A54641E0A21B500AF9B71 /* ChatEnterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatEnterViewController.h; sourceTree = "<group>"; };
 		9E8A54651E0A21B500AF9B71 /* ChatEnterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatEnterViewController.m; sourceTree = "<group>"; };
 		9E8A54661E0A21B500AF9B71 /* ChatMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMainViewController.h; sourceTree = "<group>"; };
 		9E8A54671E0A21B500AF9B71 /* ChatMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMainViewController.m; sourceTree = "<group>"; };
-		9E8A54701E0A223800AF9B71 /* ChatBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBaseViewController.h; sourceTree = "<group>"; };
-		9E8A54711E0A223800AF9B71 /* ChatBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatBaseViewController.m; sourceTree = "<group>"; };
 		9E8A54731E0A22D000AF9B71 /* ChatMainViewController+ChatBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChatMainViewController+ChatBar.h"; sourceTree = "<group>"; };
 		9E8A54741E0A22D000AF9B71 /* ChatMainViewController+ChatBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChatMainViewController+ChatBar.m"; sourceTree = "<group>"; };
 		9EB9CAA81DFE839C00103A89 /* VivienVoiceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VivienVoiceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,8 +95,6 @@
 		9EB9CACC1DFE839C00103A89 /* VivienVoiceDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VivienVoiceDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB9CAD01DFE839C00103A89 /* VivienVoiceDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VivienVoiceDemoUITests.m; sourceTree = "<group>"; };
 		9EB9CAD21DFE839C00103A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9EE0694E1E0A24EC001D22C8 /* ChatBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBaseView.h; sourceTree = "<group>"; };
-		9EE0694F1E0A24EC001D22C8 /* ChatBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatBaseView.m; sourceTree = "<group>"; };
 		9EE069511E0A24EC001D22C8 /* EcoMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EcoMessageCell.h; sourceTree = "<group>"; };
 		9EE069521E0A24EC001D22C8 /* EcoMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EcoMessageCell.m; sourceTree = "<group>"; };
 		9EE069541E0A24EC001D22C8 /* ChatBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBar.h; sourceTree = "<group>"; };
@@ -145,6 +154,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9E531A701E1102E4000990F9 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				9E531A711E1102E4000990F9 /* ChatBaseView.h */,
+				9E531A721E1102E4000990F9 /* ChatBaseView.m */,
+				9E531A731E1102E4000990F9 /* ChatBaseViewController.h */,
+				9E531A741E1102E4000990F9 /* ChatBaseViewController.m */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
 		9E8A545D1E093F5100AF9B71 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,7 +176,6 @@
 		9E8A54611E0A21B500AF9B71 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9E8A546F1E0A223800AF9B71 /* BaseClasses */,
 				9E8A54641E0A21B500AF9B71 /* ChatEnterViewController.h */,
 				9E8A54651E0A21B500AF9B71 /* ChatEnterViewController.m */,
 				9E8A54661E0A21B500AF9B71 /* ChatMainViewController.h */,
@@ -165,15 +184,6 @@
 				9E8A54741E0A22D000AF9B71 /* ChatMainViewController+ChatBar.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		9E8A546F1E0A223800AF9B71 /* BaseClasses */ = {
-			isa = PBXGroup;
-			children = (
-				9E8A54701E0A223800AF9B71 /* ChatBaseViewController.h */,
-				9E8A54711E0A223800AF9B71 /* ChatBaseViewController.m */,
-			);
-			path = BaseClasses;
 			sourceTree = "<group>";
 		};
 		9EB9CA9F1DFE839C00103A89 = {
@@ -246,6 +256,7 @@
 		9EB9CAE11DFE85E600103A89 /* ChartDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9E531A701E1102E4000990F9 /* BaseClasses */,
 				9EE0696F1E0A5552001D22C8 /* Category */,
 				9EE0694C1E0A24EC001D22C8 /* Views */,
 				9E8A54611E0A21B500AF9B71 /* Controller */,
@@ -259,6 +270,12 @@
 			children = (
 				9E25422F1E0BD04900A1FF24 /* EcoMessage.h */,
 				9E2542301E0BD04900A1FF24 /* EcoMessage.m */,
+				9E413BE21E0D1593003430E1 /* EcoMessageManager.h */,
+				9E413BE31E0D1593003430E1 /* EcoMessageManager.m */,
+				9E531A771E11052A000990F9 /* EcoCommonFunc.h */,
+				9E531A781E11052A000990F9 /* EcoCommonFunc.m */,
+				9E531A7A1E110D43000990F9 /* EcoMessageDBHelper.h */,
+				9E531A7B1E110D43000990F9 /* EcoMessageDBHelper.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -266,22 +283,12 @@
 		9EE0694C1E0A24EC001D22C8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9EE0694D1E0A24EC001D22C8 /* BaseClasses */,
 				9EE069501E0A24EC001D22C8 /* Cell */,
 				9EE069531E0A24EC001D22C8 /* ChatBar */,
 				9EE069571E0A24EC001D22C8 /* ChatMainView */,
 				9EE0695C1E0A24EC001D22C8 /* Keyboard */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		9EE0694D1E0A24EC001D22C8 /* BaseClasses */ = {
-			isa = PBXGroup;
-			children = (
-				9EE0694E1E0A24EC001D22C8 /* ChatBaseView.h */,
-				9EE0694F1E0A24EC001D22C8 /* ChatBaseView.m */,
-			);
-			path = BaseClasses;
 			sourceTree = "<group>";
 		};
 		9EE069501E0A24EC001D22C8 /* Cell */ = {
@@ -537,18 +544,21 @@
 			files = (
 				9EB9CAB31DFE839C00103A89 /* ViewController.m in Sources */,
 				9EB9CAB01DFE839C00103A89 /* AppDelegate.m in Sources */,
-				9E8A54721E0A223800AF9B71 /* ChatBaseViewController.m in Sources */,
 				9EE069641E0A24EC001D22C8 /* ChatMessageDisplayView+Delegate.m in Sources */,
+				9E531A7C1E110D43000990F9 /* EcoMessageDBHelper.m in Sources */,
 				9E8A54751E0A22D000AF9B71 /* ChatMainViewController+ChatBar.m in Sources */,
+				9E413BE41E0D1593003430E1 /* EcoMessageManager.m in Sources */,
 				9E8A546A1E0A21B500AF9B71 /* ChatMainViewController.m in Sources */,
+				9E531A751E1102E4000990F9 /* ChatBaseView.m in Sources */,
 				9E8A54691E0A21B500AF9B71 /* ChatEnterViewController.m in Sources */,
+				9E531A761E1102E4000990F9 /* ChatBaseViewController.m in Sources */,
 				9EE069621E0A24EC001D22C8 /* EcoMessageCell.m in Sources */,
 				9EE069631E0A24EC001D22C8 /* ChatBar.m in Sources */,
 				9EE069651E0A24EC001D22C8 /* ChatMessageDisplayView.m in Sources */,
 				9EE069671E0A24EC001D22C8 /* KeyboardMoreView.m in Sources */,
+				9E531A791E11052A000990F9 /* EcoCommonFunc.m in Sources */,
 				9EB9CAAD1DFE839C00103A89 /* main.m in Sources */,
 				9E2542311E0BD04900A1FF24 /* EcoMessage.m in Sources */,
-				9EE069611E0A24EC001D22C8 /* ChatBaseView.m in Sources */,
 				9EE069661E0A24EC001D22C8 /* KeyboardMoreView+CollectionView.m in Sources */,
 				9EE069721E0A5552001D22C8 /* UIView+Frame.m in Sources */,
 				9EE0696A1E0A251A001D22C8 /* KeyBoardMoreCell.m in Sources */,

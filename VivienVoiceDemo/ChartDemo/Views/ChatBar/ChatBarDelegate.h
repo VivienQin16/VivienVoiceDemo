@@ -15,6 +15,7 @@
 - (void)changeStatusFrom:(EcoChatBarStatus)fromStatus to:(EcoChatBarStatus)toStatus;
 
 @optional
+- (void)sendTextViewText:(NSString *)text;
 
 /**
  *  输入框高度改变

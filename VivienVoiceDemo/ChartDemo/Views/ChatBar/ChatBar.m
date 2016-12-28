@@ -68,7 +68,7 @@
 
 }
 
-#pragma mark - # Delegate 实现
+#pragma mark - #UITextView  Delegate 实现
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView
 {
     if(self.status != EcoChatBarStatusKeyboard)
@@ -76,14 +76,29 @@
         if (_delegate && [_delegate respondsToSelector:@selector(changeStatusFrom:to:)]) {
             [self.delegate changeStatusFrom:self.status to:EcoChatBarStatusKeyboard];
         }
-        
     }
-    
-    
-    
     return YES;
 }
 
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if ([text isEqualToString:@"\n"]){
+        [self sendCurrentText];
+        return NO;
+    }
+    return YES;
+}
+
+- (void)sendCurrentText
+{
+    if (self.textView.text.length > 0) {     // send Text
+        if (_delegate && [_delegate respondsToSelector:@selector(sendTextViewText:)]) {
+            [_delegate sendTextViewText:self.textView.text];
+        }
+    }
+    [self.textView setText:@""];
+    //    [self p_reloadTextViewWithAnimation:YES];
+}
 
 - (BOOL)resignFirstResponder
 {
@@ -115,25 +130,21 @@
 - (void)voiceButtonDown
 {
     if (self.status == EcoChatBarStatusVoice) {
-        
         [self.textView becomeFirstResponder];
         [self.talkButton setHidden:YES];
         [self.textView setHidden:NO];
 
         [self.voiceButton setImage:[UIImage imageNamed:@"ToolViewInputVoice"] forState:UIControlStateNormal];
         [self.voiceButton setImage:[UIImage imageNamed:@"ToolViewInputVoiceHL"] forState:UIControlStateHighlighted];
-        
         self.status = EcoChatBarStatusKeyboard;
     }
     else
     {
-        
         [self.textView resignFirstResponder];
         
         if (_delegate && [_delegate respondsToSelector:@selector(changeStatusFrom:to:)]) {
             [self.delegate changeStatusFrom:self.status to:EcoChatBarStatusVoice];
         }
-    
         [self.talkButton setHidden:NO];
         [self.textView setHidden:YES];
         [self.voiceButton setImage:[UIImage imageNamed:@"ToolViewKeyboard"] forState:UIControlStateNormal];
@@ -141,8 +152,6 @@
         self.status = EcoChatBarStatusVoice;
     }
 }
-
-
 
 #pragma mark - # Gettter  Subviews
 - (UIButton *)voiceButton
@@ -189,24 +198,6 @@
                 [weakSelf.delegate chatBarWillCancelRecording:weakSelf cancel:cancel];
             }
         };
-        
-//        [_talkButton setTouchBeginAction:^{
-//            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(chatBarStartRecording:)]) {
-//                [weakSelf.delegate chatBarStartRecording:weakSelf];
-//            }
-//        } willTouchCancelAction:^(BOOL cancel) {
-//            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(chatBarWillCancelRecording:cancel:)]) {
-//                [weakSelf.delegate chatBarWillCancelRecording:weakSelf cancel:cancel];
-//            }
-//        } touchEndAction:^{
-//            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(chatBarFinishedRecoding:)]) {
-//                [weakSelf.delegate chatBarFinishedRecoding:weakSelf];
-//            }
-//        } touchCancelAction:^{
-//            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(chatBarDidCancelRecording:)]) {
-//                [weakSelf.delegate chatBarDidCancelRecording:weakSelf];
-//            }
-//        }];
     }
     return _talkButton;
 }

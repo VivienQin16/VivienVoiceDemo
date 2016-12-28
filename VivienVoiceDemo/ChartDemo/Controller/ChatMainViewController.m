@@ -9,6 +9,7 @@
 #import "ChatMainViewController.h"
 #import "ChatBar.h"
 #import "ChatMainViewController+ChatBar.h"
+#import "EcoMessageManager.h"
 @interface ChatMainViewController ()
 
 @end
@@ -20,8 +21,7 @@
     // Do any additional setup after loading the view.
     self.title = @"科大讯飞";
     
-     self.lastStatus = self.curStatus = EcoChatBarStatusInit;
-
+    self.lastStatus = self.curStatus = EcoChatBarStatusInit;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,6 +57,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardFrameWillChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    
+    [self setMessageData];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -65,8 +67,19 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)setMessageData
+{
+    self.dataArray = [[EcoMessageManager sharedMessageManager] getMessageList];
     
-    
+    self.messageDisplayView.dataArr = self.dataArray;
+}
+
+- (void)layoutSubviews
+{
+//    [self.view layoutSubviews];
+//    [self setSubviewsLayout];
+}
+
 - (NSMutableArray *)dataArray
 {
     if (!_dataArray) {
@@ -74,7 +87,6 @@
     }
     return _dataArray;
 }
-
 
 #pragma mark - # Getter
 - (ChatMessageDisplayView *)messageDisplayView
@@ -86,6 +98,7 @@
     return _messageDisplayView;
 }
 
+//底下的聊天框
 - (ChatBar *)chatBar
 {
     if (_chatBar == nil) {

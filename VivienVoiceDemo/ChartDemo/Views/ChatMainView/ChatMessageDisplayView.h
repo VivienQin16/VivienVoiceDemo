@@ -13,8 +13,11 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 
-@property (nonatomic, strong) NSMutableArray *data;
+@property (nonatomic, strong) NSMutableArray *dataArr;
 
 @property (nonatomic, assign) id<ChatMessageDisplayViewDelegate>delegate;
+
+- (void)reloadData;
+
 
 @end

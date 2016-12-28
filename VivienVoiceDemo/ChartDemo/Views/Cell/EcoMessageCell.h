@@ -17,6 +17,9 @@
 
 @property (nonatomic, strong) UILabel *usernameLabel;
 
-@property (nonatomic, strong) UIImageView *messageBackgroundView;
+//Message Bubble View
+@property (nonatomic, strong) UIImageView *bubbleImage;
+
+- (void)setMessage:(EcoMessage *)message;
 
 @end

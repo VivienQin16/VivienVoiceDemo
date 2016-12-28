@@ -38,6 +38,12 @@
     }
 }
 
+
+- (void)reloadData
+{
+    [self.tableView reloadData];
+}
+
 #pragma mark - # Getter
 - (UITableView *)tableView
 {

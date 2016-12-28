@@ -19,6 +19,7 @@ typedef NS_ENUM(NSInteger, MessageOwnerType){
 typedef NS_ENUM(NSInteger, MessageType) {
     MessageTypeUnknown,
     MessageTypeText,          // 文字
+    MessagetTypeAttributedText, //富文本
 //    MessageTypeImage,         // 图片
 //    MessageTypeExpression,    // 表情
     MessageTypeVoice,         // 语音
@@ -35,6 +36,7 @@ typedef NS_ENUM(NSInteger, MessageType) {
 @property (nonatomic, strong) NSString *messageID;                  // 消息ID
 //@property (nonatomic, strong) NSString *userID;                     // 发送者ID
 @property (nonatomic, assign) MessageOwnerType ownerTyper;        // 发送者类型
+@property (nonatomic, assign) MessageType messageType;        // 消息发送类型
 @property (nonatomic, strong) NSString *messageText;            //消息发送内容
 
 @end

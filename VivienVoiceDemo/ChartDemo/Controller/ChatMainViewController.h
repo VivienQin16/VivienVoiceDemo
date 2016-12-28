@@ -16,7 +16,6 @@
     
 @property (nonatomic, strong) NSMutableArray *dataArray;
 
-
 @property (nonatomic, assign) EcoChatBarStatus lastStatus;
 
 @property (nonatomic, assign) EcoChatBarStatus curStatus;
@@ -32,6 +31,7 @@
 /// 录音展示view
 @property (nonatomic, strong) RecorderIndicatorView *recorderIndicatorView;;
 
-
+- (void)setMessageData;
+- (void)layoutSubviews;
 
 @end

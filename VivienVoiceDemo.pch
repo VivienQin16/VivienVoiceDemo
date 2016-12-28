@@ -21,6 +21,8 @@
 
 #import "Masonry.h"
 #import "UIView+Frame.h"
+#import "EcoCommonFunc.h"
+#import "EcoMessageManager.h"
 
 
 typedef NS_ENUM(NSInteger, EcoChatBarStatus) {

@@ -7,19 +7,19 @@
 //
 
 #import "ChatMessageDisplayView+Delegate.h"
-
+#import "EcoMessageCell.h"
 @implementation ChatMessageDisplayView (Delegate)
 
 
 #pragma mark --LogTable Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-     return self.data.count;
+     return self.dataArr.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 30;
+    return 60;
 }
 
 
@@ -27,14 +27,16 @@
 {
     // Create
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    EcoMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[EcoMessageCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    cell.selectionStyle = NO;
-    cell.backgroundColor =[UIColor whiteColor];
+
 
     cell.textLabel.font = [UIFont systemFontOfSize:15];
+    
+    EcoMessage *message = self.dataArr[indexPath.row];
+    [cell setMessage:message];
     
     return cell;
 }
