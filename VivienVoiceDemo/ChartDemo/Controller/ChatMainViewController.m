@@ -12,6 +12,7 @@
 #import "EcoMessageManager.h"
 @interface ChatMainViewController ()
 
+
 @end
 #define kChatTableViewControllerCellId @"ChatTableViewController"
 @implementation ChatMainViewController
@@ -20,8 +21,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"科大讯飞";
+    lastStatus = curStatus = EcoChatBarStatusInit;
     
-    self.lastStatus = self.curStatus = EcoChatBarStatusInit;
+    _resultText = [[NSMutableString alloc]init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -126,6 +128,31 @@
     return _recorderIndicatorView;
 }
 
-
+///科大讯飞语音识别
+- (IFlySpeechRecognizer *) iFlySpeechRecognizer
+{
+    if (_iFlySpeechRecognizer == nil) {
+        _iFlySpeechRecognizer = [IFlySpeechRecognizer sharedInstance];
+        [_iFlySpeechRecognizer setParameter:@"" forKey:[IFlySpeechConstant PARAMS]];
+        
+        //设置听写模式
+        [_iFlySpeechRecognizer setParameter:@"iat" forKey:[IFlySpeechConstant IFLY_DOMAIN]];
+        [_iFlySpeechRecognizer setParameter:@"iat.pcm" forKey:[IFlySpeechConstant
+                                                                   ASR_AUDIO_PATH]];
+        _iFlySpeechRecognizer.delegate = self;
+    }
+    return _iFlySpeechRecognizer;
+}
+//用户的语音或文本Message
+- (EcoMessage *)sendMessage
+{
+    if(_sendMessage == nil)
+    {
+        _sendMessage = [[EcoMessage alloc]init];
+        _sendMessage.ownerTyper = MessageOwnerTypeSelf;
+        _sendMessage.messageType = MessageTypeText;
+    }
+    return _sendMessage;
+}
 
 @end

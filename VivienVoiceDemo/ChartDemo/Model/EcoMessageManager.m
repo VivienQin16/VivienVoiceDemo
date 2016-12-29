@@ -51,6 +51,11 @@
     return result;
 }
 
+- (BOOL )updateEcoMessageByID:(NSString *)messageID  messageText:(NSString *)text
+{
+    return [_dbHelper updateEcoMessageByID:messageID messageText:text];
+}
+
 
 
 @end

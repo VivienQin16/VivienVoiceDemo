@@ -67,5 +67,19 @@
     return success;
 }
 
+- (BOOL )updateEcoMessageByID:(NSString *)messageID  messageText:(NSString *)text
+{
+    [self getLKDBHelper];
+     BOOL success = false;
+     NSString * sqlStr = [NSString stringWithFormat:@"SELECT * from @t where messageID ='%@'",messageID];
+     NSMutableArray *searchResultArray = [globalHelper searchWithSQL:sqlStr toClass:[EcoMessage class]];
+    if (searchResultArray && [searchResultArray count]>0) {
+        EcoMessage *tempMessage = searchResultArray[0];
+        tempMessage.messageText = text;
+       success = [globalHelper updateToDB:tempMessage where:nil];
+    }
+    return success;
+}
+
 
 @end

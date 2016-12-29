@@ -8,8 +8,7 @@
 
 #import "ChatMainViewController.h"
 
-@interface ChatMainViewController (ChatBar)<ChatBarDelegate,ChatMessageDisplayViewDelegate>
-
+@interface ChatMainViewController (ChatBar)<ChatBarDelegate,ChatMessageDisplayViewDelegate,IFlySpeechRecognizerDelegate>
 
 - (void)keyboardWillShow:(NSNotification *)notification;
 - (void)keyboardDidShow:(NSNotification *)notification;

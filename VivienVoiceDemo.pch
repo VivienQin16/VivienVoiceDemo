@@ -38,3 +38,7 @@ typedef NS_ENUM(NSInteger, EcoChatBarStatus) {
     EcoChatBarStatusMore,
     EcoChatBarStatusKeyboard,
 };
+
+//科大讯飞
+
+#import "iflyMSC/IFlyMSC.h"

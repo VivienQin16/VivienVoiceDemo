@@ -9,6 +9,19 @@
 /* Begin PBXBuildFile section */
 		9E0EF1A91E0B7E1000B00CF5 /* RecorderIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0EF1A81E0B7E1000B00CF5 /* RecorderIndicatorView.m */; };
 		9E249F771E13A2090029AAFA /* UITableView+Chat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E249F761E13A2090029AAFA /* UITableView+Chat.m */; };
+		9E249F7F1E13B1270029AAFA /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E249F7E1E13B1270029AAFA /* iflyMSC.framework */; };
+		9E249F811E13B14B0029AAFA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E249F801E13B14B0029AAFA /* CoreTelephony.framework */; };
+		9E249F831E13B1510029AAFA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E249F821E13B1510029AAFA /* AVFoundation.framework */; };
+		9E249F871E13B1600029AAFA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E249F861E13B1600029AAFA /* AudioToolbox.framework */; };
+		9E249F891E13B1660029AAFA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E249F881E13B1660029AAFA /* SystemConfiguration.framework */; };
+		9E249F8B1E13B16E0029AAFA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E249F8A1E13B16E0029AAFA /* QuartzCore.framework */; };
+		9E249F8D1E13B1760029AAFA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E249F8C1E13B1760029AAFA /* CoreGraphics.framework */; };
+		9E249F8F1E13B18C0029AAFA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E249F8E1E13B18C0029AAFA /* UIKit.framework */; };
+		9E249F911E13B1930029AAFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E249F901E13B1930029AAFA /* Foundation.framework */; };
+		9E249F931E13B1A30029AAFA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E249F921E13B1A30029AAFA /* libz.tbd */; };
+		9E249F941E13B2D60029AAFA /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E249F841E13B15A0029AAFA /* AddressBook.framework */; };
+		9E249F961E13B2EF0029AAFA /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E249F951E13B2EF0029AAFA /* Contacts.framework */; };
+		9E249F9A1E148F820029AAFA /* ISRDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E249F991E148F820029AAFA /* ISRDataHelper.m */; };
 		9E2542311E0BD04900A1FF24 /* EcoMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2542301E0BD04900A1FF24 /* EcoMessage.m */; };
 		9E413BE41E0D1593003430E1 /* EcoMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E413BE31E0D1593003430E1 /* EcoMessageManager.m */; };
 		9E531A751E1102E4000990F9 /* ChatBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E531A721E1102E4000990F9 /* ChatBaseView.m */; };
@@ -62,6 +75,21 @@
 		9E0EF1A81E0B7E1000B00CF5 /* RecorderIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecorderIndicatorView.m; sourceTree = "<group>"; };
 		9E249F751E13A2090029AAFA /* UITableView+Chat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Chat.h"; sourceTree = "<group>"; };
 		9E249F761E13A2090029AAFA /* UITableView+Chat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Chat.m"; sourceTree = "<group>"; };
+		9E249F7C1E13B0F50029AAFA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9E249F7E1E13B1270029AAFA /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
+		9E249F801E13B14B0029AAFA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		9E249F821E13B1510029AAFA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9E249F841E13B15A0029AAFA /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		9E249F861E13B1600029AAFA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		9E249F881E13B1660029AAFA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9E249F8A1E13B16E0029AAFA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9E249F8C1E13B1760029AAFA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9E249F8E1E13B18C0029AAFA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9E249F901E13B1930029AAFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9E249F921E13B1A30029AAFA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		9E249F951E13B2EF0029AAFA /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		9E249F981E148F820029AAFA /* ISRDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISRDataHelper.h; sourceTree = "<group>"; };
+		9E249F991E148F820029AAFA /* ISRDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISRDataHelper.m; sourceTree = "<group>"; };
 		9E25422F1E0BD04900A1FF24 /* EcoMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EcoMessage.h; sourceTree = "<group>"; };
 		9E2542301E0BD04900A1FF24 /* EcoMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EcoMessage.m; sourceTree = "<group>"; };
 		9E413BE21E0D1593003430E1 /* EcoMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EcoMessageManager.h; sourceTree = "<group>"; };
@@ -127,6 +155,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E249F961E13B2EF0029AAFA /* Contacts.framework in Frameworks */,
+				9E249F941E13B2D60029AAFA /* AddressBook.framework in Frameworks */,
+				9E249F931E13B1A30029AAFA /* libz.tbd in Frameworks */,
+				9E249F911E13B1930029AAFA /* Foundation.framework in Frameworks */,
+				9E249F8F1E13B18C0029AAFA /* UIKit.framework in Frameworks */,
+				9E249F8D1E13B1760029AAFA /* CoreGraphics.framework in Frameworks */,
+				9E249F8B1E13B16E0029AAFA /* QuartzCore.framework in Frameworks */,
+				9E249F891E13B1660029AAFA /* SystemConfiguration.framework in Frameworks */,
+				9E249F871E13B1600029AAFA /* AudioToolbox.framework in Frameworks */,
+				9E249F831E13B1510029AAFA /* AVFoundation.framework in Frameworks */,
+				9E249F811E13B14B0029AAFA /* CoreTelephony.framework in Frameworks */,
+				9E249F7F1E13B1270029AAFA /* iflyMSC.framework in Frameworks */,
 				FCBDA8B59FE508AF1A70411B /* libPods-VivienVoiceDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +195,15 @@
 				91A28B6A0AF40F56D46D6D06 /* Pods-VivienVoiceDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9E249F971E13BEAB0029AAFA /* IFlySpeech */ = {
+			isa = PBXGroup;
+			children = (
+				9E249F981E148F820029AAFA /* ISRDataHelper.h */,
+				9E249F991E148F820029AAFA /* ISRDataHelper.m */,
+			);
+			path = IFlySpeech;
 			sourceTree = "<group>";
 		};
 		9E531A701E1102E4000990F9 /* BaseClasses */ = {
@@ -215,6 +264,7 @@
 		9EB9CAAA1DFE839C00103A89 /* VivienVoiceDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9E249F971E13BEAB0029AAFA /* IFlySpeech */,
 				9E8A545D1E093F5100AF9B71 /* Resources */,
 				9EB9CAE11DFE85E600103A89 /* ChartDemo */,
 				9EB9CAAE1DFE839C00103A89 /* AppDelegate.h */,
@@ -356,6 +406,19 @@
 		E9406A0C951F1E31A6A87BD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9E249F951E13B2EF0029AAFA /* Contacts.framework */,
+				9E249F921E13B1A30029AAFA /* libz.tbd */,
+				9E249F901E13B1930029AAFA /* Foundation.framework */,
+				9E249F8E1E13B18C0029AAFA /* UIKit.framework */,
+				9E249F7E1E13B1270029AAFA /* iflyMSC.framework */,
+				9E249F8C1E13B1760029AAFA /* CoreGraphics.framework */,
+				9E249F8A1E13B16E0029AAFA /* QuartzCore.framework */,
+				9E249F881E13B1660029AAFA /* SystemConfiguration.framework */,
+				9E249F861E13B1600029AAFA /* AudioToolbox.framework */,
+				9E249F841E13B15A0029AAFA /* AddressBook.framework */,
+				9E249F821E13B1510029AAFA /* AVFoundation.framework */,
+				9E249F801E13B14B0029AAFA /* CoreTelephony.framework */,
+				9E249F7C1E13B0F50029AAFA /* CoreLocation.framework */,
 				D98C7CB277A68EBB190B25A7 /* libPods-VivienVoiceDemo.a */,
 			);
 			name = Frameworks;
@@ -565,6 +628,7 @@
 				9EB9CAAD1DFE839C00103A89 /* main.m in Sources */,
 				9E2542311E0BD04900A1FF24 /* EcoMessage.m in Sources */,
 				9E249F771E13A2090029AAFA /* UITableView+Chat.m in Sources */,
+				9E249F9A1E148F820029AAFA /* ISRDataHelper.m in Sources */,
 				9EE069661E0A24EC001D22C8 /* KeyboardMoreView+CollectionView.m in Sources */,
 				9EE069721E0A5552001D22C8 /* UIView+Frame.m in Sources */,
 				9EE0696A1E0A251A001D22C8 /* KeyBoardMoreCell.m in Sources */,
@@ -720,6 +784,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C7G78L37X3;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VivienVoiceDemo.pch";
 				INFOPLIST_FILE = VivienVoiceDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
@@ -735,6 +805,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C7G78L37X3;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VivienVoiceDemo.pch";
 				INFOPLIST_FILE = VivienVoiceDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;

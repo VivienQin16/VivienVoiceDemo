@@ -8,6 +8,8 @@
 
 #import "ChatEnterViewController.h"
 #import "ChatMainViewController.h"
+#define APPID_VALUE           @"584a6628"
+
 @interface ChatEnterViewController ()
 
 @end
@@ -28,6 +30,16 @@
                forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:enterBtn];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    
+    //创建语音配置,appid必须要传入，仅执行一次则可
+    NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@",APPID_VALUE];
+    
+    //所有服务启动前，需要确保执行createUtility
+    [IFlySpeechUtility createUtility:initString];
 }
 
     

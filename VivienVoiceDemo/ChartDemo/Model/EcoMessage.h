@@ -20,15 +20,7 @@ typedef NS_ENUM(NSInteger, MessageType) {
     MessageTypeUnknown,
     MessageTypeText,          // 文字
     MessagetTypeAttributedText, //富文本
-//    MessageTypeImage,         // 图片
-//    MessageTypeExpression,    // 表情
-    MessageTypeVoice,         // 语音
-//    MessageTypeVideo,         // 视频
-//    MessageTypeURL,           // 链接
-//    MessageTypePosition,      // 位置
-//    MessageTypeBusinessCard,  // 名片
-//    MessageTypeSystem,        // 系统
-//    MessageTypeOther,
+    MessageTypeVoiceText,         // 语音文本
 };
 
 @interface EcoMessage : NSObject

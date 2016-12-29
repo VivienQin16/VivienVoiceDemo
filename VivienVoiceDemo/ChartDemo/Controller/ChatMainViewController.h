@@ -13,12 +13,18 @@
 #import "KeyboardMoreView.h"
 #import "RecorderIndicatorView.h"
 @interface ChatMainViewController : ChatBaseViewController
+{
+    BOOL isRecordCancel;
+//    BOOL isNewRecord; 
+    EcoChatBarStatus lastStatus;
+    EcoChatBarStatus curStatus;
+}
     
 @property (nonatomic, strong) NSMutableArray *dataArray;
 
-@property (nonatomic, assign) EcoChatBarStatus lastStatus;
-
-@property (nonatomic, assign) EcoChatBarStatus curStatus;
+//@property (nonatomic, assign) EcoChatBarStatus lastStatus;
+//
+//@property (nonatomic, assign) EcoChatBarStatus curStatus;
 
 /// 消息展示页面
 @property (nonatomic, strong) ChatMessageDisplayView *messageDisplayView;
@@ -29,8 +35,14 @@
 /// 更多键盘
 @property (nonatomic, strong) KeyboardMoreView *moreKeyboard;
 /// 录音展示view
-@property (nonatomic, strong) RecorderIndicatorView *recorderIndicatorView;;
+@property (nonatomic, strong) RecorderIndicatorView *recorderIndicatorView;
 
+///科大讯飞 语音识别对象
+@property (nonatomic, strong) IFlySpeechRecognizer *iFlySpeechRecognizer;
+
+@property (nonatomic, strong) NSMutableString * resultText;
+@property (nonatomic, strong) EcoMessage *sendMessage;
+@property (nonatomic, assign) BOOL isNewRecord;
 - (void)setMessageData;
 - (void)layoutSubviews;
 

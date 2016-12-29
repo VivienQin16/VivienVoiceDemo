@@ -20,6 +20,8 @@
 
 - (BOOL)saveEcoMessage:(EcoMessage *)tempMessage;
 
+- (BOOL )updateEcoMessageByID:(NSString *)messageID  messageText:(NSString *)text;
+
 
 
 @end
