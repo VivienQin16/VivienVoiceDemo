@@ -15,7 +15,7 @@
 @interface ChatMainViewController : ChatBaseViewController
 {
     BOOL isRecordCancel;
-//    BOOL isNewRecord; 
+    BOOL isNewRecord; 
     EcoChatBarStatus lastStatus;
     EcoChatBarStatus curStatus;
 }
@@ -42,7 +42,7 @@
 
 @property (nonatomic, strong) NSMutableString * resultText;
 @property (nonatomic, strong) EcoMessage *sendMessage;
-@property (nonatomic, assign) BOOL isNewRecord;
+//@property (nonatomic, assign) BOOL isNewRecord;
 - (void)setMessageData;
 - (void)layoutSubviews;
 

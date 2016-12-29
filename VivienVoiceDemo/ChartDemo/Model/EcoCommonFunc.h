@@ -13,4 +13,7 @@
 //生成num位随机字符串
 + (NSString*)getRandomStringWithNum:(int)num;
 
+//iOS开发中判断字符串是否为空字符的方法
++ (BOOL) isBlankString:(NSString *)string;
+
 @end

@@ -47,6 +47,7 @@
 - (void)reloadData
 {
     [self.tableView reloadData];
+    [self scrollToBottomWithAnimation:YES];
 }
 
 #pragma mark - # Getter

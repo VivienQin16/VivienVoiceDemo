@@ -8,9 +8,6 @@
 
 #import "ChatMainViewController+ChatBar.h"
 #import "ISRDataHelper.h"
-
-
-static BOOL isRecordNew;
 @implementation ChatMainViewController (ChatBar)
 
 #pragma mark --改变Charbar状态
@@ -143,9 +140,10 @@ static BOOL isRecordNew;
         make.size.mas_equalTo(CGSizeMake(150, 150));
     }];
     
-    self.isNewRecord = YES;
-    isRecordNew = YES;
+    isNewRecord = YES;
     isRecordCancel = NO;
+    self.sendMessage = nil;
+    
     //科大讯飞 开始录音
     [self.iFlySpeechRecognizer startListening];
 }
@@ -163,9 +161,9 @@ static BOOL isRecordNew;
     [self.recorderIndicatorView removeFromSuperview];
     
     [self.iFlySpeechRecognizer cancel];
-    
+
     isRecordCancel = YES;
-    self.isNewRecord = YES;
+    isNewRecord = YES;
 
 }
 
@@ -190,27 +188,24 @@ static BOOL isRecordNew;
     NSString *resultFromJson =  [ISRDataHelper stringFromJson:resultString];
 
     NSLog(@"resultFromJson=%@",resultFromJson);
-    
-    [self.resultText appendString:resultFromJson];
-    
+
     if (isLast){
         NSLog(@"听写结果(json)：%@",  resultFromJson);
     }
     
-    NSLog(@"onResults:result:%@",self.resultText);
-    
-    if (self.resultText!=nil && !isRecordCancel ) {
-//        if (self.isNewRecord ) {
-        if (isRecordNew ) {
-//            [self sendTextViewText:self.resultText];
+    if (self.resultText!=nil && !isRecordCancel  && ![EcoCommonFunc isBlankString:resultFromJson]) {
+        if (isNewRecord  ) {
+            self.resultText = [NSMutableString stringWithString:resultFromJson];
             [self sendMessageText:self.resultText messageType:MessageTypeVoiceText];
-            self.isNewRecord = NO;
-            isRecordNew = NO;
+            isNewRecord = NO;
         }
         else{
+            
+            [self.resultText appendString:resultFromJson];
             [self updateMessageText:self.resultText];
         }
     }
+    
     
 }
 
@@ -218,13 +213,12 @@ static BOOL isRecordNew;
 - (void) onError:(IFlySpeechError *) error
 {
     NSLog(@"%s",__func__);
-    self.isNewRecord = YES;
 }
 //停止录音回调
 - (void) onEndOfSpeech
 {
     NSLog(@"%s",__func__);
-    self.isNewRecord = YES;
+    isNewRecord = YES;
 }
 //开始录音回调
 - (void) onBeginOfSpeech
@@ -247,18 +241,6 @@ static BOOL isRecordNew;
 //发送文本
 - (void)sendTextViewText:(NSString *)text
 {
-//    EcoMessage *textMessage = [[EcoMessage alloc]init];
-//    textMessage.ownerTyper = MessageOwnerTypeSelf;
-//    textMessage.messageText = text;
-//    textMessage.messageType = MessageTypeText;
-//    self.sendMessage.messageText  = text;
-    
-//    BOOL result =  [[EcoMessageManager sharedMessageManager]  saveEcoMessage:self.sendMessage];
-//    if (result) {
-//        [self setMessageData];
-//        [self.messageDisplayView reloadData];
-//    }
-    
     [self sendMessageText:text messageType:MessageTypeText];
 }
 
@@ -275,15 +257,11 @@ static BOOL isRecordNew;
             self.sendMessage = nil;
         }
     }
-    
-    
 }
 
 - (void)updateMessageText:(NSString *)text
 {
-    
     [[EcoMessageManager sharedMessageManager] updateEcoMessageByID:self.sendMessage.messageID messageText:self.resultText];
-    
     [self.messageDisplayView reloadData];
 }
 
