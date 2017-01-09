@@ -151,7 +151,7 @@
     if(_sendMessage == nil)
     {
         _sendMessage = [[EcoMessage alloc]init];
-        _sendMessage.ownerTyper = MessageOwnerTypeSelf;
+        _sendMessage.ownerTyper = MessageOwnerTypeUser;
         _sendMessage.messageType = MessageTypeText;
     }
     return _sendMessage;

@@ -33,7 +33,7 @@
         NSLog(@"无结果");
         EcoMessage *initMessage = [[EcoMessage alloc]init];
         initMessage.messageType = MessageTypeText;
-        initMessage.ownerTyper =  MessageOwnerTypeFriend;
+        initMessage.ownerTyper =  MessageOwnerTypeRobot;
         initMessage.messageText = @"小主人，欢迎你";
         initMessage.sendDate = [NSDate date];
         

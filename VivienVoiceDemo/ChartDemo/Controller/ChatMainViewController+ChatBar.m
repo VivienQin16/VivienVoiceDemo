@@ -8,6 +8,7 @@
 
 #import "ChatMainViewController+ChatBar.h"
 #import "ISRDataHelper.h"
+#import "Command.h"
 @implementation ChatMainViewController (ChatBar)
 
 #pragma mark --改变Charbar状态
@@ -259,11 +260,34 @@
     
     BOOL result =  [[EcoMessageManager sharedMessageManager]  saveEcoMessage:self.sendMessage];
     if (result) {
+        //赋值然后刷新
         [self setMessageData];
         [self.messageDisplayView reloadData];
+
+        ///加入解析功能
+        Command  *command = [[Command alloc]init];
+        
+        BOOL  success = [command startRecognise:self.sendMessage.messageText];
+        if (success) {
+            
+            EcoMessage *robotMessage = [[EcoMessage alloc]init];
+            robotMessage.ownerTyper = MessageOwnerTypeRobot;
+            robotMessage.messageType = MessagetTypeLinkText;
+            robotMessage.messageText = @"请自行百度";
+            robotMessage.sendDate = [NSDate date];
+            
+            [[EcoMessageManager sharedMessageManager]  saveEcoMessage:robotMessage];
+            
+            [self setMessageData];
+            [self.messageDisplayView reloadData];
+        
+        }
+        
+       
         if (messageType == MessageTypeText) {
             self.sendMessage = nil;
         }
+    
     }
 }
 

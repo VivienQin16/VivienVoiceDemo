@@ -8,13 +8,15 @@
 
 #import "ChatMessageDisplayView+Delegate.h"
 #import "EcoMessageCell.h"
+#import "EcoLinkMessageCell.h"
+#import "EcoMessage.h"
 @implementation ChatMessageDisplayView (Delegate)
 
 #pragma mark - # Public Methods
 - (void)registerCellClassForTableView:(UITableView *)tableView
 {
     [tableView registerClass:[EcoMessageCell class] forCellReuseIdentifier:@"EcoMessageCell"];
-//    [tableView registerClass:[EcoLinkMessageCell class] forCellReuseIdentifier:@"EcoLinkMessageCell"];
+    [tableView registerClass:[EcoLinkMessageCell class] forCellReuseIdentifier:@"EcoLinkMessageCell"];
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"EmptyCell"];
 }
 
@@ -42,20 +44,35 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Create
-    static NSString *CellIdentifier = @"Cell";
-    EcoMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[EcoMessageCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+
+    EcoMessage * message = self.dataArr[indexPath.row];
+    
+    if( message.messageType == MessageTypeText)
+    {
+        static NSString *CellIdentifier = @"Cell";
+        EcoMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            cell = [[EcoMessageCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        }
+        
+        cell.textLabel.font = [UIFont systemFontOfSize:15];
+        [cell setMessage:message];
+        return  cell;
+        
     }
-
-
-    cell.textLabel.font = [UIFont systemFontOfSize:15];
+    else if (message.messageType == MessagetTypeLinkText)
+    {
+        EcoLinkMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EcoLinkMessageCell"];
+        [cell setMessage:message];
+        
+        return cell;
+    }
     
-    EcoMessage *message = self.dataArr[indexPath.row];
-    [cell setMessage:message];
     
-    return cell;
+    
+
+    
+    return [tableView dequeueReusableCellWithIdentifier:@"EmptyCell"];;
 }
 
 @end

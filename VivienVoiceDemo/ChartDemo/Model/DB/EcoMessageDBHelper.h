@@ -17,6 +17,7 @@
 
 //获取MessageList
 - (NSMutableArray *)getMessageList;
+
 - (BOOL )updateEcoMessageByID:(NSString *)messageID  messageText:(NSString *)text;
 
 @end

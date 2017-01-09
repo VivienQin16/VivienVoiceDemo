@@ -10,16 +10,14 @@
 #import "EcoMessageFrame.h"
 
 typedef NS_ENUM(NSInteger, MessageOwnerType){
-//    MessageOwnerTypeUnknown,  // 未知的消息拥有者
-//    MessageOwnerTypeSystem,   // 系统消息
-    MessageOwnerTypeSelf,     // 自己发送的消息
-    MessageOwnerTypeFriend,   // 接收到的他人消息
+    MessageOwnerTypeUser,     // 用户自己发送的消息
+    MessageOwnerTypeRobot,   // 聊天机器人发的
 };
 
 typedef NS_ENUM(NSInteger, MessageType) {
     MessageTypeUnknown,
     MessageTypeText,          // 文字
-    MessagetTypeAttributedText, //富文本
+    MessagetTypeLinkText, //富文本,点击操作
     MessageTypeVoiceText,         // 语音文本
 };
 
