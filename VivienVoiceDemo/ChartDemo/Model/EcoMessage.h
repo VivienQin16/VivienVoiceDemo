@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "EcoMessageFrame.h"
 
 typedef NS_ENUM(NSInteger, MessageOwnerType){
 //    MessageOwnerTypeUnknown,  // 未知的消息拥有者
@@ -26,12 +26,19 @@ typedef NS_ENUM(NSInteger, MessageType) {
 @interface EcoMessage : NSObject
 {
     CGSize fitSize;
+
+    EcoMessageFrame *kMessageFrame;
+
+
 }
 
-@property (nonatomic, strong) NSString *messageID;                  // 消息ID
-//@property (nonatomic, strong) NSString *userID;                     // 发送者ID
+@property (nonatomic, strong) NSString *messageID;                 // 消息ID
+//@property (nonatomic, strong) NSString *userID;                  // 发送者ID
 @property (nonatomic, assign) MessageOwnerType ownerTyper;        // 发送者类型
 @property (nonatomic, assign) MessageType messageType;        // 消息发送类型
 @property (nonatomic, strong) NSString *messageText;            //消息发送内容
+@property (nonatomic, strong) NSDate *sendDate;            //消息发送时间
+
+- (EcoMessageFrame *)messageFrame;
 
 @end

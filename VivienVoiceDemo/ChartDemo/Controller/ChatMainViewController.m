@@ -74,11 +74,13 @@
     self.dataArray = [[EcoMessageManager sharedMessageManager] getMessageList];
     
     self.messageDisplayView.dataArr = self.dataArray;
+
 }
 
 - (void)layoutSubviews
 {
-//    [self.view layoutSubviews];
+    [self.view layoutSubviews];
+    [self.messageDisplayView scrollToBottomWithAnimation:YES];
 //    [self setSubviewsLayout];
 }
 

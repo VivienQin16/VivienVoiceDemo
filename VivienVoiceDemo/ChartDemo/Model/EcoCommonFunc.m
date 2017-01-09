@@ -10,7 +10,6 @@
 
 @implementation EcoCommonFunc
 
-
 //生成num位随机字符串
 + (NSString*)getRandomStringWithNum:(int)num
 {
@@ -21,7 +20,6 @@
     NSString *str = [[NSString alloc] initWithBytes:data length:NUMBER_OF_CHARS encoding:NSUTF8StringEncoding];
     return str;
 }
-
 
 //iOS开发中判断字符串是否为空字符的方法
 + (BOOL) isBlankString:(NSString *)string

@@ -10,6 +10,9 @@
 #import "ChatBarDelegate.h"
 
 @interface ChatBar : ChatBaseView
+{
+    NSString *textRec; //存储textview Text
+}
 
 @property (nonatomic, assign) EcoChatBarStatus status;
 

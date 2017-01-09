@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TTTAttributeLabelView.h"
 @interface EcoMessageCell : UITableViewCell
 
 ///对话时间

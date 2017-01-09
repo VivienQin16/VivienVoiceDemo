@@ -10,8 +10,15 @@
 #import "EcoMessageCell.h"
 @implementation ChatMessageDisplayView (Delegate)
 
+#pragma mark - # Public Methods
+- (void)registerCellClassForTableView:(UITableView *)tableView
+{
+    [tableView registerClass:[EcoMessageCell class] forCellReuseIdentifier:@"EcoMessageCell"];
+//    [tableView registerClass:[EcoLinkMessageCell class] forCellReuseIdentifier:@"EcoLinkMessageCell"];
+    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"EmptyCell"];
+}
 
-#pragma mark --LogTable Delegate
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
      return self.dataArr.count;
@@ -26,20 +33,10 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-//    static EcoMessageCell *cell = nil;
-//    if (!cell){
-//        cell = [[EcoMessageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-//    }
-//
-////    [cell setMessage:self.dataArr[indexPath.row]];
-//    [cell updateConstraintsIfNeeded];
-//    [cell setNeedsLayout];
-//    
-//    CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
-//    NSLog(@"height:%f",height);
-//            
-//    return height + 1;
-    return 60;
+    EcoMessage * message = self.dataArr[indexPath.row];
+    return message.messageFrame.height;
+    
+    //    return 60;
 }
 
 

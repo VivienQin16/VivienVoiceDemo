@@ -18,8 +18,7 @@
 #define     HEIGHT_MAX_CHATBAR_TEXTVIEW     111.5f
 
 #define     HEIGHT_TABBAR               49.0f
-#define     HEIGHT_NAVBAR               44.0f
-#define     HEIGHT_STATUSBAR            20.0f
+
 
 #define     MAX_MESSAGE_WIDTH               kScreenWidth * 0.58
 
@@ -30,6 +29,7 @@
 #import "EcoMessageManager.h"
 
 #import "UITableView+Chat.h"
+
 
 
 typedef NS_ENUM(NSInteger, EcoChatBarStatus) {

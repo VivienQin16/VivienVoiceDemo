@@ -143,6 +143,13 @@
 {
     if (self.status == EcoChatBarStatusVoice) {
         [self.textView becomeFirstResponder];
+        
+        if (textRec.length > 0) {
+            [self.textView setText:textRec];
+            textRec = @"";
+            [self reloadTextViewWithAnimation:YES];
+        }
+        
         [self.talkButton setHidden:YES];
         [self.textView setHidden:NO];
 
@@ -152,6 +159,12 @@
     }
     else
     {
+        if (self.textView.text.length > 0) {
+            textRec = self.textView.text;
+            self.textView.text = @"";
+            [self reloadTextViewWithAnimation:YES];
+        }
+        
         [self.textView resignFirstResponder];
         
         if (_delegate && [_delegate respondsToSelector:@selector(changeStatusFrom:to:)]) {

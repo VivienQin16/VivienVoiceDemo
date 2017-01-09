@@ -25,6 +25,7 @@
         [self.chatBar mas_updateConstraints:^(MASConstraintMaker *make) {
              make.bottom.mas_equalTo(self.view).mas_offset(-HEIGHT_CHAT_KEYBOARD);
         }];
+        [self.messageDisplayView scrollToBottomWithAnimation:YES];
     }
      else if (toStatus == EcoChatBarStatusMore)
     {
@@ -45,7 +46,6 @@
          }];
      }
     
-    [self layoutSubviews];
 }
 
 ///点击空白区域隐藏chatBar
@@ -193,14 +193,13 @@
         NSLog(@"听写结果(json)：%@",  resultFromJson);
     }
     
-    if (self.resultText!=nil && !isRecordCancel  && ![EcoCommonFunc isBlankString:resultFromJson]) {
+    if (self.resultText != nil && !isRecordCancel  && ![EcoCommonFunc isBlankString:resultFromJson]) {
         if (isNewRecord  ) {
             self.resultText = [NSMutableString stringWithString:resultFromJson];
             [self sendMessageText:self.resultText messageType:MessageTypeVoiceText];
             isNewRecord = NO;
         }
         else{
-            
             [self.resultText appendString:resultFromJson];
             [self updateMessageText:self.resultText];
         }
@@ -226,10 +225,18 @@
      NSLog(@"onBeginOfSpeech");
 }
 
-//音量回调函数
+/**
+ 音量回调函数
+ volume 0－30
+ ****/
 - (void) onVolumeChanged: (int)volume
 {
     NSLog(@"%s",__func__);
+    NSLog(@"volume:%d",volume);
+
+    [self.recorderIndicatorView setVolume:volume/30.0f];
+    
+
 }
 
 //会话取消回调
@@ -248,6 +255,7 @@
 {
     self.sendMessage.messageText  = text;
     self.sendMessage.messageType  = messageType;
+    self.sendMessage.sendDate = [NSDate date];
     
     BOOL result =  [[EcoMessageManager sharedMessageManager]  saveEcoMessage:self.sendMessage];
     if (result) {
@@ -263,6 +271,7 @@
 {
     [[EcoMessageManager sharedMessageManager] updateEcoMessageByID:self.sendMessage.messageID messageText:self.resultText];
     [self.messageDisplayView reloadData];
+    [self.messageDisplayView  scrollToBottomWithAnimation:YES];
 }
 
 @end

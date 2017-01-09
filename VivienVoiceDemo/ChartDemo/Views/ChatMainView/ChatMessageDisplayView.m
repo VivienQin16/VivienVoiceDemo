@@ -17,6 +17,7 @@
 - (void)initSubviews
 {
     [self addSubview:self.tableView];
+    [self registerCellClassForTableView:self.tableView];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTouchTableView)];
     [self.tableView addGestureRecognizer:tap];

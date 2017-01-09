@@ -10,4 +10,6 @@
 
 @interface ChatMessageDisplayView (Delegate)<UITableViewDelegate, UITableViewDataSource>
 
+- (void)registerCellClassForTableView:(UITableView *)tableView;
+
 @end

@@ -32,9 +32,10 @@
     if ([_resultArray count] == 0) {
         NSLog(@"无结果");
         EcoMessage *initMessage = [[EcoMessage alloc]init];
-        initMessage.messageType = MessagetTypeAttributedText;
+        initMessage.messageType = MessageTypeText;
         initMessage.ownerTyper =  MessageOwnerTypeFriend;
         initMessage.messageText = @"小主人，欢迎你";
+        initMessage.sendDate = [NSDate date];
         
         [_dbHelper saveEcoMessage:initMessage];
         _resultArray = [_dbHelper getMessageList];

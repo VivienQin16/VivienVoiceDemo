@@ -57,13 +57,7 @@
 {
     [self getLKDBHelper];
     BOOL success = false;
-    //重复的告警信息不存储
-    //    NSMutableArray *searchResultArray = [self getWarnListWithType:warnInfo.deviceType anbotJID:warnInfo.guanjiaJID];
-    //    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"timeSecondsSince1970 == %lld", warnInfo.timeSecondsSince1970];
-    //    NSArray *timeSameArray = [searchResultArray filteredArrayUsingPredicate:predicate];
-    //    if ( !timeSameArray || [timeSameArray count] == 0) {
     success = [globalHelper insertToDB:tempMessage];
-    //    }
     return success;
 }
 
