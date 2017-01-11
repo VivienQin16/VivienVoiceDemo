@@ -10,7 +10,10 @@
 #import "ChatMainViewController.h"
 #define APPID_VALUE           @"584a6628"
 
-@interface ChatEnterViewController ()
+
+#import "TTTAttributedLabel.h"
+
+@interface ChatEnterViewController ()<TTTAttributedLabelDelegate>
 
 @end
 
@@ -29,6 +32,19 @@
                          action:@selector(enterBtnClicked)
                forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:enterBtn];
+    
+    
+    
+    TTTAttributedLabel *tttLabel = [[TTTAttributedLabel alloc]initWithFrame:CGRectMake(10, 200, 200, 200)];
+    tttLabel.delegate = self;
+    [self.view addSubview:tttLabel];
+    NSString *labelText = @"Lost? Learn more.";
+    tttLabel.text = labelText;
+    NSRange r = [labelText rangeOfString:@"Learn more"];
+    [tttLabel addLinkToURL:[NSURL URLWithString:@"action://show-help"] withRange:r];
+
+    
+
     
 }
 
@@ -53,6 +69,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url {
+    NSLog(@"Did click");
 }
 
 

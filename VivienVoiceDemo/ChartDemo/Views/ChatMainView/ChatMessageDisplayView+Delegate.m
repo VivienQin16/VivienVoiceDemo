@@ -46,31 +46,26 @@
 {
 
     EcoMessage * message = self.dataArr[indexPath.row];
+    static NSString *CellIdentifier = @"Cell";
+    EcoBaseMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    if( message.messageType == MessageTypeText)
+    if( message.messageType == MessageTypeText || message.messageType == MessageTypeVoiceText )
     {
-        static NSString *CellIdentifier = @"Cell";
-        EcoMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
             cell = [[EcoMessageCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         }
-        
-        cell.textLabel.font = [UIFont systemFontOfSize:15];
         [cell setMessage:message];
         return  cell;
         
     }
     else if (message.messageType == MessagetTypeLinkText)
     {
-        EcoLinkMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EcoLinkMessageCell"];
+        cell = [[EcoLinkMessageCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+//        EcoLinkMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EcoLinkMessageCell"];
         [cell setMessage:message];
         
         return cell;
     }
-    
-    
-    
-
     
     return [tableView dequeueReusableCellWithIdentifier:@"EmptyCell"];;
 }

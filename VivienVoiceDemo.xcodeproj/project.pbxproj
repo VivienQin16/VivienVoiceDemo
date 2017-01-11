@@ -37,7 +37,6 @@
 		9EB9CABB1DFE839C00103A89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EB9CAB91DFE839C00103A89 /* LaunchScreen.storyboard */; };
 		9EB9CAC61DFE839C00103A89 /* VivienVoiceDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9CAC51DFE839C00103A89 /* VivienVoiceDemoTests.m */; };
 		9EB9CAD11DFE839C00103A89 /* VivienVoiceDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB9CAD01DFE839C00103A89 /* VivienVoiceDemoUITests.m */; };
-		9EC5C5D51E1CC3AA0055DA92 /* TTTAttributeLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5C5D41E1CC3AA0055DA92 /* TTTAttributeLabelView.m */; };
 		9EE069621E0A24EC001D22C8 /* EcoMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE069521E0A24EC001D22C8 /* EcoMessageCell.m */; };
 		9EE069631E0A24EC001D22C8 /* ChatBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE069551E0A24EC001D22C8 /* ChatBar.m */; };
 		9EE069641E0A24EC001D22C8 /* ChatMessageDisplayView+Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE069591E0A24EC001D22C8 /* ChatMessageDisplayView+Delegate.m */; };
@@ -54,7 +53,6 @@
 		9EF650091E23797200EC0753 /* Command.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF650081E23797200EC0753 /* Command.m */; };
 		9EF6500F1E237A7300EC0753 /* EcoMessageDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF6500C1E237A7300EC0753 /* EcoMessageDBHelper.m */; };
 		9EF650101E237A7300EC0753 /* EcoMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF6500E1E237A7300EC0753 /* EcoMessageManager.m */; };
-		9EF650131E238EAA00EC0753 /* EcoLinkMessageCell+TTTAttributeLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF650121E238EAA00EC0753 /* EcoLinkMessageCell+TTTAttributeLabelView.m */; };
 		FCBDA8B59FE508AF1A70411B /* libPods-VivienVoiceDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D98C7CB277A68EBB190B25A7 /* libPods-VivienVoiceDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -126,8 +124,6 @@
 		9EB9CACC1DFE839C00103A89 /* VivienVoiceDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VivienVoiceDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB9CAD01DFE839C00103A89 /* VivienVoiceDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VivienVoiceDemoUITests.m; sourceTree = "<group>"; };
 		9EB9CAD21DFE839C00103A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9EC5C5D31E1CC3AA0055DA92 /* TTTAttributeLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributeLabelView.h; sourceTree = "<group>"; };
-		9EC5C5D41E1CC3AA0055DA92 /* TTTAttributeLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributeLabelView.m; sourceTree = "<group>"; };
 		9EE069511E0A24EC001D22C8 /* EcoMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EcoMessageCell.h; sourceTree = "<group>"; };
 		9EE069521E0A24EC001D22C8 /* EcoMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EcoMessageCell.m; sourceTree = "<group>"; };
 		9EE069541E0A24EC001D22C8 /* ChatBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBar.h; sourceTree = "<group>"; };
@@ -162,8 +158,6 @@
 		9EF6500C1E237A7300EC0753 /* EcoMessageDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EcoMessageDBHelper.m; sourceTree = "<group>"; };
 		9EF6500D1E237A7300EC0753 /* EcoMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EcoMessageManager.h; sourceTree = "<group>"; };
 		9EF6500E1E237A7300EC0753 /* EcoMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EcoMessageManager.m; sourceTree = "<group>"; };
-		9EF650111E238EAA00EC0753 /* EcoLinkMessageCell+TTTAttributeLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EcoLinkMessageCell+TTTAttributeLabelView.h"; sourceTree = "<group>"; };
-		9EF650121E238EAA00EC0753 /* EcoLinkMessageCell+TTTAttributeLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EcoLinkMessageCell+TTTAttributeLabelView.m"; sourceTree = "<group>"; };
 		D180B54502430A588B859F99 /* Pods-VivienVoiceDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivienVoiceDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VivienVoiceDemo/Pods-VivienVoiceDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D98C7CB277A68EBB190B25A7 /* libPods-VivienVoiceDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VivienVoiceDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -366,14 +360,10 @@
 				9EF64FF81E2361AD00EC0753 /* EcoBaseMessageCell.m */,
 				9EE069681E0A251A001D22C8 /* KeyBoardMoreCell.h */,
 				9EE069691E0A251A001D22C8 /* KeyBoardMoreCell.m */,
-				9EC5C5D31E1CC3AA0055DA92 /* TTTAttributeLabelView.h */,
-				9EC5C5D41E1CC3AA0055DA92 /* TTTAttributeLabelView.m */,
 				9EE069511E0A24EC001D22C8 /* EcoMessageCell.h */,
 				9EE069521E0A24EC001D22C8 /* EcoMessageCell.m */,
 				9EF64FFA1E23636D00EC0753 /* EcoLinkMessageCell.h */,
 				9EF64FFB1E23636D00EC0753 /* EcoLinkMessageCell.m */,
-				9EF650111E238EAA00EC0753 /* EcoLinkMessageCell+TTTAttributeLabelView.h */,
-				9EF650121E238EAA00EC0753 /* EcoLinkMessageCell+TTTAttributeLabelView.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -685,13 +675,11 @@
 				9E249F9A1E148F820029AAFA /* ISRDataHelper.m in Sources */,
 				9EE069661E0A24EC001D22C8 /* KeyboardMoreView+CollectionView.m in Sources */,
 				9EE069721E0A5552001D22C8 /* UIView+Frame.m in Sources */,
-				9EC5C5D51E1CC3AA0055DA92 /* TTTAttributeLabelView.m in Sources */,
 				9EE0696A1E0A251A001D22C8 /* KeyBoardMoreCell.m in Sources */,
 				9EF650021E23785600EC0753 /* EcoMessage.m in Sources */,
 				9E0EF1A91E0B7E1000B00CF5 /* RecorderIndicatorView.m in Sources */,
 				9EF650031E23785600EC0753 /* EcoMessageFrame.m in Sources */,
 				9EF650101E237A7300EC0753 /* EcoMessageManager.m in Sources */,
-				9EF650131E238EAA00EC0753 /* EcoLinkMessageCell+TTTAttributeLabelView.m in Sources */,
 				9EE0696E1E0A500E001D22C8 /* TalkButton.m in Sources */,
 				9EF6500F1E237A7300EC0753 /* EcoMessageDBHelper.m in Sources */,
 			);

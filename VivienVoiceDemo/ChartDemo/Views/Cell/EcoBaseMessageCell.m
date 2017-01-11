@@ -35,7 +35,6 @@
 {
     self.selectionStyle = NO;
     [self setBackgroundColor:[UIColor clearColor]];
-    [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     
     [self.contentView addSubview:self.avatarButton];
     [self.contentView addSubview:self.bubbleImage];
